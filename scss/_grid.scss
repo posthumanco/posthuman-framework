@@ -1,0 +1,22 @@
+$totalCols: 12 !default;
+
+$small: "only screen";
+$large: "only screen and (min-width: 1024px)";
+
+@mixin columnWidths($size) {
+	$increment: 1;
+	@while $increment <= $totalCols {
+		.#{$size}-#{$increment} {
+			width: (100% / $totalCols) * $increment;
+		}
+		$increment: $increment + 1;
+	}
+}
+
+@media #{$small} {
+	@include columnWidths(small);	
+}
+
+@media #{$large} {
+	@include columnWidths(large);
+}
