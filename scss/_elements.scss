@@ -1,25 +1,18 @@
-$button-type: primary $primary, secondary $secondary, disabled $disabled, alert $alert;
+//////////////////////////////////////////////////
+// Buttons and A elements
+//////////////////////////////////////////////////
+
+$button-type: primary $primary $primary-hover, secondary $secondary $secondary-hover, disabled $disabled $disabled-hover, alert $alert $alert-hover;
 
 @mixin clickables() {
-	// setting default
+	// generating other buttons
 	button, a.button, input[type=submit] {
 		background: $primary;
 		border: none;
 		padding: $button-padding;
 		font-size: $button-font-size;
 		&:hover {
-			background: darken($primary, 10%);
-		}
-	}
-	// generating other buttons
-	button, a.button, input[type=submit] {
-		@each $type in $button-type {
-			&.#{nth($type, 1)} {
-				background: #{nth($type, 2)};
-				&:hover {
-					background: darken(nth($type, 2), 10%);
-				}
-			}
+			background: $primary-hover;
 		}
 		&.tiny {
 			padding: $button-padding - 4px;
@@ -33,13 +26,29 @@ $button-type: primary $primary, secondary $secondary, disabled $disabled, alert 
 			padding: $button-padding + 4px;
 			font-size: $button-font-size + 4px;
 		}
+		@each $type in $button-type {
+			&.#{nth($type, 1)} {
+				background: #{nth($type, 2)};
+				&:hover {
+					background: #{nth($type, 3)};
+				}
+			}
+		}
 	}
 	a {
+		color: $primary;
+		text-decoration: none;
+		&:visited {
+			color: $primary;
+		}
+		&:hover {
+			color: darken($primary, 10%);
+		}
 		@each $type in $button-type {
 			&.#{nth($type, 1)} {
 				color: #{nth($type, 2)};
 				&:hover {
-					background: darken(nth($type, 2), 10%);
+					background: #{nth($type, 3)};
 				}
 			}
 		}
@@ -47,3 +56,32 @@ $button-type: primary $primary, secondary $secondary, disabled $disabled, alert 
 }
 
 @include clickables;
+
+//////////////////////////////////////////////////
+// Typography
+//////////////////////////////////////////////////
+
+// Fonts
+$header-font: Helvetica;
+$content-font: Times;
+$font-size: 16px;
+
+// H Elements
+$h-default: 28px;
+
+@mixin h-elements {
+	@for $i from 1 through 6 {
+		h#{$i}, .h#{$i} {
+			font-family: $header-font;
+			font-size: $h-default - ($i + $i);
+		}
+	}
+}
+
+@include h-elements;
+
+// Paragraphs
+p {
+	font-family: $content-font;
+	font-size: $font-size;
+}

@@ -6,6 +6,10 @@ $small: "only screen";
 $medium: "only screen and (min-width: 768px)";
 $large: "only screen and (min-width: 1024px)";
 
+//////////////////////////////////////////////////
+// Column Generator
+//////////////////////////////////////////////////
+
 @mixin columns($size) {
 	@for $i from 1 through $total-columns {
 		$column-calc: (100% / $total-columns) * $i;
@@ -13,7 +17,7 @@ $large: "only screen and (min-width: 1024px)";
 			@if $size == push {
 				left: $column-calc;
 			}
-			@if $size == pull {
+			@elseif $size == pull {
 				right: $column-calc;
 			}
 			@else {
@@ -37,6 +41,10 @@ $large: "only screen and (min-width: 1024px)";
 	}
 }
 
+//////////////////////////////////////////////////
+// Row Defaults
+//////////////////////////////////////////////////
+
 .row {
 	width: 100%;
 	margin: 0 auto;
@@ -59,11 +67,19 @@ $large: "only screen and (min-width: 1024px)";
     }
 }
 
+//////////////////////////////////////////////////
+// Column Defaults
+//////////////////////////////////////////////////
+
 .column, .columns {
 	float: left;
 	padding-left: $column-gutter / 2;
 	padding-right: $column-gutter / 2;
 }
+
+//////////////////////////////////////////////////
+// Float/Text Alignment Generators
+//////////////////////////////////////////////////
 
 @each $float in left, right {
 	.#{$float} {
@@ -75,6 +91,10 @@ $large: "only screen and (min-width: 1024px)";
 		text-align: $align;
 	}
 }
+
+//////////////////////////////////////////////////
+// Column Output
+//////////////////////////////////////////////////
 
 @include columns(push);
 

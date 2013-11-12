@@ -1,8 +1,12 @@
 // Button/Link Colors - PLEASE USE HEX OR RGB
 $primary: rgb(0, 0, 255);
+	$primary-hover: darken($primary, 10%);
 $secondary: rgb(173, 216, 230);
+	$secondary-hover: darken($secondary, 10%);
 $disabled: rgb(128, 128, 128);
+	$disabled-hover: darken($disabled, 10%);
 $alert: rgb(255, 0, 0);
+	$alert-hover: darken($alert, 10%);
 
 // Button Padding/Font Sizes
 $button-padding: 8px;

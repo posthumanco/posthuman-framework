@@ -70,62 +70,50 @@ table {
 
 .push-1 {
   left: 8.33333%;
-  width: 8.33333%;
   position: relative; }
 
 .push-2 {
   left: 16.66667%;
-  width: 16.66667%;
   position: relative; }
 
 .push-3 {
   left: 25%;
-  width: 25%;
   position: relative; }
 
 .push-4 {
   left: 33.33333%;
-  width: 33.33333%;
   position: relative; }
 
 .push-5 {
   left: 41.66667%;
-  width: 41.66667%;
   position: relative; }
 
 .push-6 {
   left: 50%;
-  width: 50%;
   position: relative; }
 
 .push-7 {
   left: 58.33333%;
-  width: 58.33333%;
   position: relative; }
 
 .push-8 {
   left: 66.66667%;
-  width: 66.66667%;
   position: relative; }
 
 .push-9 {
   left: 75%;
-  width: 75%;
   position: relative; }
 
 .push-10 {
   left: 83.33333%;
-  width: 83.33333%;
   position: relative; }
 
 .push-11 {
   left: 91.66667%;
-  width: 91.66667%;
   position: relative; }
 
 .push-12 {
   left: 100%;
-  width: 100%;
   position: relative; }
 
 .pull-1 {
@@ -446,56 +434,87 @@ table {
     margin-left: auto;
     margin-right: auto;
     float: none !important; } }
-button, .border-radius, a.button, .border-radius, input[type=submit], .border-radius {
+button, a.button, input[type=submit] {
   background: blue;
   border: none;
   padding: 8px;
   font-size: 16px; }
-  button:hover, .border-radius:hover, a.button:hover, .border-radius:hover, input[type=submit]:hover, .border-radius:hover {
+  button:hover, a.button:hover, input[type=submit]:hover {
     background: #0000cc; }
+  button.tiny, a.button.tiny, input[type=submit].tiny {
+    padding: 4px;
+    font-size: 10px; }
+  button.small, a.button.small, input[type=submit].small {
+    padding: 6px;
+    font-size: 12px; }
+  button.large, a.button.large, input[type=submit].large {
+    padding: 12px;
+    font-size: 20px; }
+  button.primary, a.button.primary, input[type=submit].primary {
+    background: blue; }
+    button.primary:hover, a.button.primary:hover, input[type=submit].primary:hover {
+      background: #0000cc; }
+  button.secondary, a.button.secondary, input[type=submit].secondary {
+    background: lightblue; }
+    button.secondary:hover, a.button.secondary:hover, input[type=submit].secondary:hover {
+      background: #86c5da; }
+  button.disabled, a.button.disabled, input[type=submit].disabled {
+    background: grey; }
+    button.disabled:hover, a.button.disabled:hover, input[type=submit].disabled:hover {
+      background: #676767; }
+  button.alert, a.button.alert, input[type=submit].alert {
+    background: red; }
+    button.alert:hover, a.button.alert:hover, input[type=submit].alert:hover {
+      background: #cc0000; }
 
-button.primary, .primary.border-radius, a.button.primary, .primary.border-radius, input[type=submit].primary, .primary.border-radius {
-  background: blue; }
-  button.primary:hover, .primary.border-radius:hover, a.button.primary:hover, .primary.border-radius:hover, input[type=submit].primary:hover, .primary.border-radius:hover {
-    background: #0000cc; }
-button.secondary, .secondary.border-radius, a.button.secondary, .secondary.border-radius, input[type=submit].secondary, .secondary.border-radius {
-  background: lightblue; }
-  button.secondary:hover, .secondary.border-radius:hover, a.button.secondary:hover, .secondary.border-radius:hover, input[type=submit].secondary:hover, .secondary.border-radius:hover {
-    background: #86c5da; }
-button.disabled, .disabled.border-radius, a.button.disabled, .disabled.border-radius, input[type=submit].disabled, .disabled.border-radius {
-  background: grey; }
-  button.disabled:hover, .disabled.border-radius:hover, a.button.disabled:hover, .disabled.border-radius:hover, input[type=submit].disabled:hover, .disabled.border-radius:hover {
-    background: #676767; }
-button.alert, .alert.border-radius, a.button.alert, .alert.border-radius, input[type=submit].alert, .alert.border-radius {
-  background: red; }
-  button.alert:hover, .alert.border-radius:hover, a.button.alert:hover, .alert.border-radius:hover, input[type=submit].alert:hover, .alert.border-radius:hover {
-    background: #cc0000; }
-button.tiny, .tiny.border-radius, a.button.tiny, .tiny.border-radius, input[type=submit].tiny, .tiny.border-radius {
-  padding: 4px;
-  font-size: 10px; }
-button.small, .small.border-radius, a.button.small, .small.border-radius, input[type=submit].small, .small.border-radius {
-  padding: 6px;
-  font-size: 12px; }
-button.large, .large.border-radius, a.button.large, .large.border-radius, input[type=submit].large, .large.border-radius {
-  padding: 12px;
+a {
+  color: blue;
+  text-decoration: none; }
+  a:visited {
+    color: blue; }
+  a:hover {
+    color: #0000cc; }
+  a.primary {
+    color: blue; }
+    a.primary:hover {
+      background: #0000cc; }
+  a.secondary {
+    color: lightblue; }
+    a.secondary:hover {
+      background: #86c5da; }
+  a.disabled {
+    color: grey; }
+    a.disabled:hover {
+      background: #676767; }
+  a.alert {
+    color: red; }
+    a.alert:hover {
+      background: #cc0000; }
+
+h1, .h1 {
+  font-family: Helvetica;
+  font-size: 26px; }
+
+h2, .h2 {
+  font-family: Helvetica;
+  font-size: 24px; }
+
+h3, .h3 {
+  font-family: Helvetica;
+  font-size: 22px; }
+
+h4, .h4 {
+  font-family: Helvetica;
   font-size: 20px; }
 
-a.primary {
-  color: blue; }
-  a.primary:hover {
-    background: #0000cc; }
-a.secondary {
-  color: lightblue; }
-  a.secondary:hover {
-    background: #86c5da; }
-a.disabled {
-  color: grey; }
-  a.disabled:hover {
-    background: #676767; }
-a.alert {
-  color: red; }
-  a.alert:hover {
-    background: #cc0000; }
+h5, .h5 {
+  font-family: Helvetica;
+  font-size: 18px; }
 
-.border-radius {
-  border-radius: 200px; }
+h6, .h6 {
+  font-family: Helvetica;
+  font-size: 16px; }
+
+p {
+  font-family: Times;
+  font-size: 16px; }
