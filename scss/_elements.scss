@@ -1,0 +1,49 @@
+$button-type: primary $primary, secondary $secondary, disabled $disabled, alert $alert;
+
+@mixin clickables() {
+	// setting default
+	button, a.button, input[type=submit] {
+		background: $primary;
+		border: none;
+		padding: $button-padding;
+		font-size: $button-font-size;
+		&:hover {
+			background: darken($primary, 10%);
+		}
+	}
+	// generating other buttons
+	button, a.button, input[type=submit] {
+		@each $type in $button-type {
+			&.#{nth($type, 1)} {
+				background: #{nth($type, 2)};
+				&:hover {
+					background: darken(nth($type, 2), 10%);
+				}
+			}
+		}
+		&.tiny {
+			padding: $button-padding - 4px;
+			font-size: $button-font-size - 6px;
+		}
+		&.small {
+			padding: $button-padding - 2px;
+			font-size: $button-font-size - 4px;
+		}
+		&.large {
+			padding: $button-padding + 4px;
+			font-size: $button-font-size + 4px;
+		}
+	}
+	a {
+		@each $type in $button-type {
+			&.#{nth($type, 1)} {
+				color: #{nth($type, 2)};
+				&:hover {
+					background: darken(nth($type, 2), 10%);
+				}
+			}
+		}
+	}
+}
+
+@include clickables;

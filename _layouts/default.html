@@ -14,15 +14,33 @@
 
     </head>
     <body>
-
-        <div class="site small-12 large-3">
+      <div class="row">
+        <div class="site small-12 columns">
           <div class="header">
             <h1 class="title"><a href="/">{{ site.name }}</a></h1>
             <a class="extra" href="/">home</a>
           </div>
-
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 large-9 large-centered columns">
           {{ content }}
-
+          <div class="row">
+            <div class="small-12 large-6 columns">
+              Hello 
+              <button class="primary tiny">Hello</button>
+              <button class="secondary small">Hello</button>
+              <button class="disabled">Hello</button>
+              <button class="alert large">Hello</button>
+            </div>
+            <div class="small-12 large-6 columns">
+              Hello There
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row collapse">
+        <div class="small-12 columns text-center">
           <div class="footer">
             <div class="contact">
               <p>
@@ -39,6 +57,6 @@
             </div>
           </div>
         </div>
-
+      </div>
     </body>
 </html>
