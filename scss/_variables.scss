@@ -1,3 +1,6 @@
+$column-gutter: 2%;
+$max-row-width: 1224px;
+
 // Button/Link Colors - PLEASE USE HEX OR RGB
 $primary: rgb(0, 0, 255);
 	$primary-hover: darken($primary, 10%);
@@ -9,5 +12,6 @@ $alert: rgb(255, 0, 0);
 	$alert-hover: darken($alert, 10%);
 
 // Button Padding/Font Sizes
-$button-padding: 8px;
-$button-font-size: 16px;
+$button-padding: .5em;
+$button-font-size: 1em;
+$button-border-radius: 2px;

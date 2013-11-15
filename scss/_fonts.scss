@@ -1,0 +1,283 @@
+@font-face {
+	font-family: 'posthuman';
+	src:url('fonts/posthuman.eot');
+	src:url('fonts/posthuman.eot?#iefix') format('embedded-opentype'),
+		url('fonts/posthuman.woff') format('woff'),
+		url('fonts/posthuman.ttf') format('truetype'),
+		url('fonts/posthuman.svg#posthuman') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'posthuman';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="ph-"] {
+*/
+.ph-posthuman_text, .ph-posthuman_hexagon, .ph-sun-stroke, .ph-moon-stroke, .ph-facebook, .ph-twitter, .ph-linkedin, .ph-reddit, .ph-envelop, .ph-lock, .ph-user, .ph-eye, .ph-eye-blocked, .ph-feed, .ph-embed, .ph-code, .ph-tumblr, .ph-html5, .ph-css3, .ph-chrome, .ph-firefox, .ph-IE, .ph-opera, .ph-safari, .ph-apple, .ph-finder, .ph-android, .ph-windows8, .ph-soundcloud, .ph-github, .ph-github-2, .ph-github-3, .ph-google-plus, .ph-contrast, .ph-location, .ph-pencil, .ph-phone, .ph-keyboard, .ph-screen, .ph-laptop, .ph-mobile, .ph-mobile-2, .ph-tablet, .ph-tv, .ph-cog, .ph-bug, .ph-link, .ph-vimeo, .ph-instagram, .ph-google-drive, .ph-dribbble, .ph-flickr, .ph-wordpress, .ph-foursquare, .ph-pinterest, .ph-paypal, .ph-file-xml, .ph-file-css, .ph-windows, .ph-forrst, .ph-stackoverflow, .ph-youtube, .ph-youtube-2, .ph-tag, .ph-cart, .ph-image, .ph-camera, .ph-music, .ph-arrow-left, .ph-arrow-right, .ph-arrow-up, .ph-arrow-down, .ph-search, .ph-spinner, .ph-mug, .ph-tux, .ph-warning, .ph-checkmark, .ph-cancel, .ph-copy, .ph-bullhorn {
+	font-family: 'posthuman';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.ph-posthuman_text:before {
+	content: "\e000";
+}
+.ph-posthuman_hexagon:before {
+	content: "\e001";
+}
+.ph-sun-stroke:before {
+	content: "\e002";
+}
+.ph-moon-stroke:before {
+	content: "\e003";
+}
+.ph-facebook:before {
+	content: "\e004";
+}
+.ph-twitter:before {
+	content: "\e005";
+}
+.ph-linkedin:before {
+	content: "\e006";
+}
+.ph-reddit:before {
+	content: "\e007";
+}
+.ph-envelop:before {
+	content: "\e008";
+}
+.ph-lock:before {
+	content: "\e009";
+}
+.ph-user:before {
+	content: "\e00a";
+}
+.ph-eye:before {
+	content: "\e00b";
+}
+.ph-eye-blocked:before {
+	content: "\e00c";
+}
+.ph-feed:before {
+	content: "\e00d";
+}
+.ph-embed:before {
+	content: "\e00e";
+}
+.ph-code:before {
+	content: "\e00f";
+}
+.ph-tumblr:before {
+	content: "\e010";
+}
+.ph-html5:before {
+	content: "\e011";
+}
+.ph-css3:before {
+	content: "\e012";
+}
+.ph-chrome:before {
+	content: "\e013";
+}
+.ph-firefox:before {
+	content: "\e014";
+}
+.ph-IE:before {
+	content: "\e015";
+}
+.ph-opera:before {
+	content: "\e016";
+}
+.ph-safari:before {
+	content: "\e017";
+}
+.ph-apple:before {
+	content: "\e018";
+}
+.ph-finder:before {
+	content: "\e019";
+}
+.ph-android:before {
+	content: "\e01a";
+}
+.ph-windows8:before {
+	content: "\e01b";
+}
+.ph-soundcloud:before {
+	content: "\e01c";
+}
+.ph-github:before {
+	content: "\e01d";
+}
+.ph-github-2:before {
+	content: "\e01f";
+}
+.ph-github-3:before {
+	content: "\e020";
+}
+.ph-google-plus:before {
+	content: "\e021";
+}
+.ph-contrast:before {
+	content: "\e022";
+}
+.ph-location:before {
+	content: "\e023";
+}
+.ph-pencil:before {
+	content: "\e024";
+}
+.ph-phone:before {
+	content: "\e025";
+}
+.ph-keyboard:before {
+	content: "\e026";
+}
+.ph-screen:before {
+	content: "\e027";
+}
+.ph-laptop:before {
+	content: "\e028";
+}
+.ph-mobile:before {
+	content: "\e029";
+}
+.ph-mobile-2:before {
+	content: "\e02a";
+}
+.ph-tablet:before {
+	content: "\e02b";
+}
+.ph-tv:before {
+	content: "\e02c";
+}
+.ph-cog:before {
+	content: "\e02d";
+}
+.ph-bug:before {
+	content: "\e02e";
+}
+.ph-link:before {
+	content: "\e02f";
+}
+.ph-vimeo:before {
+	content: "\e030";
+}
+.ph-instagram:before {
+	content: "\e031";
+}
+.ph-google-drive:before {
+	content: "\e032";
+}
+.ph-dribbble:before {
+	content: "\e033";
+}
+.ph-flickr:before {
+	content: "\e034";
+}
+.ph-wordpress:before {
+	content: "\e035";
+}
+.ph-foursquare:before {
+	content: "\e036";
+}
+.ph-pinterest:before {
+	content: "\e037";
+}
+.ph-paypal:before {
+	content: "\e038";
+}
+.ph-file-xml:before {
+	content: "\e039";
+}
+.ph-file-css:before {
+	content: "\e03a";
+}
+.ph-windows:before {
+	content: "\e01e";
+}
+.ph-forrst:before {
+	content: "\e03b";
+}
+.ph-stackoverflow:before {
+	content: "\e03c";
+}
+.ph-youtube:before {
+	content: "\e03d";
+}
+.ph-youtube-2:before {
+	content: "\e03e";
+}
+.ph-tag:before {
+	content: "\e040";
+}
+.ph-cart:before {
+	content: "\e041";
+}
+.ph-image:before {
+	content: "\e042";
+}
+.ph-camera:before {
+	content: "\e043";
+}
+.ph-music:before {
+	content: "\e044";
+}
+.ph-arrow-left:before {
+	content: "\e045";
+}
+.ph-arrow-right:before {
+	content: "\e046";
+}
+.ph-arrow-up:before {
+	content: "\e047";
+}
+.ph-arrow-down:before {
+	content: "\e048";
+}
+.ph-search:before {
+	content: "\e049";
+}
+.ph-spinner:before {
+	content: "\e04a";
+}
+.ph-mug:before {
+	content: "\e04b";
+}
+.ph-tux:before {
+	content: "\e04c";
+}
+.ph-warning:before {
+	content: "\e04e";
+}
+.ph-checkmark:before {
+	content: "\e03f";
+}
+.ph-cancel:before {
+	content: "\e04d";
+}
+.ph-copy:before {
+	content: "\e04f";
+}
+.ph-bullhorn:before {
+	content: "\e050";
+}

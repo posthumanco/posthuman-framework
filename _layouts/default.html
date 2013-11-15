@@ -14,54 +14,54 @@
 
     </head>
     <body>
-      <div class="row">
-        <div class="site small-12 columns">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
+      <div class="row full-width collapse nav text-center"><!--nav wrapper-->
+        <div class="small-12 columns">
+          <header id="header">
+            <i class="ph-arrow-down menu-toggle"></i>
+            <nav>
+              <ul>
+                <li class="mobile-logo">{{#linkTo 'index'}}<i class="ph-posthuman_text"></i>{{/linkTo}}</li>
+                <li>{{#linkTo 'posts'}}Posts{{/linkTo}}</li>
+                <li>{{#linkTo 'tags'}}Tags{{/linkTo}}</li>
+                <li class="logo">{{#linkTo 'index'}}<i class="ph-posthuman_text"></i>{{/linkTo}}</li>
+                <li>{{#linkTo 'about'}}About{{/linkTo}}</li>
+                <li>{{#linkTo 'search'}}Search{{/linkTo}}</li>
+              </ul>
+            </nav>
+          </header>
         </div>
-      </div>
+      </div><!--end nav wrapper row-->
       <div class="row">
-        <div class="small-12 large-9 large-centered columns">
-          {{ content }}
+        <div class="small-12 large-12 large-centered columns">
           <div class="row">
-            <div class="small-12 large-6 columns">
-              Hello 
-              <button class="primary tiny">Hello</button>
-              <button class="secondary small">Hello</button>
-              <button class="disabled">Hello</button>
-              <button class="alert large">Hello</button>
+            <div class="site small-12 columns">
+              
             </div>
-            <div class="small-12 large-6 columns">
-              <h1>Hello</h1>
-              <h2>Hello</h2>
-              <h3>Hello</h3>
-              <h4>Hello</h4>
-              <h5>Hello</h5>
-              <h6>Hello</h6>
+          </div>
+          <div class="row">
+            <div class="small-11 small-centered medium-10 medium-centered large-7 large-centered columns">
+              {{ content }}
+            </div>
+          </div>
+          <div class="row collapse">
+            <div class="small-12 columns text-center">
+              <div class="footer">
+                <div class="contact">
+                  <p>
+                    Your Name<br />
+                    What You Are<br />
+                    you@example.com
+                  </p>
+                </div>
+                <div class="contact">
+                  <p>
+                    <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                    <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row collapse">
-        <div class="small-12 columns text-center">
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </body>
 </html>

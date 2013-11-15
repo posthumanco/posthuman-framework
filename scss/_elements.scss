@@ -11,20 +11,25 @@ $button-type: primary $primary $primary-hover, secondary $secondary $secondary-h
 		border: none;
 		padding: $button-padding;
 		font-size: $button-font-size;
+		display: inline-block;
+		border-radius: $button-border-radius;
 		&:hover {
 			background: $primary-hover;
 		}
 		&.tiny {
-			padding: $button-padding - 4px;
-			font-size: $button-font-size - 6px;
+			padding: $button-padding;
+			font-size: $button-font-size - .3em;
 		}
 		&.small {
-			padding: $button-padding - 2px;
-			font-size: $button-font-size - 4px;
+			padding: $button-padding;
+			font-size: $button-font-size - .2em;
 		}
 		&.large {
-			padding: $button-padding + 4px;
-			font-size: $button-font-size + 4px;
+			padding: $button-padding + .4em;
+			font-size: $button-font-size + .2em;
+		}
+		&.expand {
+			width: 100%;
 		}
 		@each $type in $button-type {
 			&.#{nth($type, 1)} {
@@ -64,16 +69,16 @@ $button-type: primary $primary $primary-hover, secondary $secondary $secondary-h
 // Fonts
 $header-font: Helvetica;
 $content-font: Times;
-$font-size: 16px;
+$font-size: 1em;
 
 // H Elements
-$h-default: 28px;
+$h-default: 2em;
 
 @mixin h-elements {
 	@for $i from 1 through 6 {
 		h#{$i}, .h#{$i} {
 			font-family: $header-font;
-			font-size: $h-default - ($i + $i);
+			font-size: $h-default - ($i * .15);
 		}
 	}
 }
@@ -81,7 +86,25 @@ $h-default: 28px;
 @include h-elements;
 
 // Paragraphs
+$line-height: 1.5em;
+
 p {
 	font-family: $content-font;
 	font-size: $font-size;
+	line-height: $line-height;
+}
+
+//////////////////////////////////////////////////
+// Nav Defaults
+//////////////////////////////////////////////////
+
+nav {
+	ul {
+		li {
+			display: block;
+			@media #{$medium} {
+				display: inline-block;
+			}
+		}
+	}
 }
