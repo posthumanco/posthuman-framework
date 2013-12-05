@@ -6,9 +6,16 @@ title: Your New Jekyll Site
 <div id="home">
 	{% for post in site.posts %}
 		<div class="post">
-	  		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-			{{ post.content }}
-	  		<span>{{ post.date | date_to_string }}</span>
+			<div class="row collapse banner">
+				<div class="small-12 columns">
+					<img src="{{ post.banner }}">
+				</div>
+			</div>
+			<div class="small-11 small-centered medium-10 medium-centered large-6 large-centered columns">
+		  		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+				{{ post.content }}
+		  		<span>{{ post.date | date_to_string }}</span>
+		  	</div>
 	  	</div>
 	{% endfor %}
 </div>

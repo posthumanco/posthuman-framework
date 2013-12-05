@@ -1,6 +1,119 @@
 //////////////////////////////////////////////////
+// Typography
+//////////////////////////////////////////////////
+
+$em-reset-screen: 16px !default;
+$em-reset-medium: 18px !default;
+$em-reset-large: 22px !default;
+
+// em Reset
+body {
+	font-size: $em-reset-screen;
+	@media #{$medium} {
+		font-size: $em-reset-medium;
+	}
+	@media #{$large} {
+		font-size: $em-reset-large;
+	}
+}
+
+$import-default-fonts: true !default;
+
+@if $import-default-fonts == true {
+	@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Gentium+Book+Basic:400,700,400italic,700italic);
+} 
+
+// Font Families
+$h-font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
+$content-font-family: "Gentium Book Basic", Times, serif !default;
+
+// Font Sizes
+$h-font-size: 2em !default;
+$h-font-weight: 700 !default;
+$content-font-size: 1em !default;
+$content-font-weight: 300 !default;
+
+@mixin h-elements {
+	@for $i from 1 through 6 {
+		h#{$i}, .h#{$i} {
+			font-family: $h-font-family;
+			font-size: $h-font-size - ($i * .15);
+			font-weight: $h-font-weight;
+			margin-top: 1em;
+		}
+	}
+}
+
+@include h-elements;
+
+// Paragraphs
+$line-height: 1.61803398875 !default;
+
+p {
+	font-family: $content-font-family;
+	font-size: $content-font-size;
+	font-weight: $content-font-weight;
+	line-height: $line-height;
+	margin: 1.5em 0;
+}
+
+// Lists
+ul {
+	margin-left: 1em;
+	margin-top: 1.5em;
+	li {
+		line-height: 1.5em;
+		list-style-type: disc;
+		ul {
+			margin-top: 0;
+		}
+	}
+}
+ol {
+	margin-left: 1.4em;	
+	li {
+		line-height: 1.5em;
+		list-style-type: decimal;
+	}
+}
+dl {
+	dd {
+		margin-left: 1em;
+		line-height: 1.5em;
+		&:before {
+			content: "- ";
+
+		}
+	}
+}
+
+//////////////////////////////////////////////////
+// Nav Defaults
+//////////////////////////////////////////////////
+
+nav {
+	ul {
+		li {
+			display: block;
+			@media #{$medium} {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+//////////////////////////////////////////////////
 // Buttons and A elements
 //////////////////////////////////////////////////
+
+$primary: rgb(0, 0, 255) !default;
+	$primary-hover: darken($primary, 10%) !default;
+$secondary: rgb(173, 216, 230) !default;
+	$secondary-hover: darken($secondary, 10%) !default;
+$disabled: rgb(128, 128, 128) !default;
+	$disabled-hover: darken($disabled, 10%) !default;
+$alert: rgb(255, 0, 0) !default;
+	$alert-hover: darken($alert, 10%) !default;
 
 $button-type: primary $primary $primary-hover, secondary $secondary $secondary-hover, disabled $disabled $disabled-hover, alert $alert $alert-hover;
 
@@ -61,50 +174,3 @@ $button-type: primary $primary $primary-hover, secondary $secondary $secondary-h
 }
 
 @include clickables;
-
-//////////////////////////////////////////////////
-// Typography
-//////////////////////////////////////////////////
-
-// Fonts
-$header-font: Helvetica;
-$content-font: Times;
-$font-size: 1em;
-
-// H Elements
-$h-default: 2em;
-
-@mixin h-elements {
-	@for $i from 1 through 6 {
-		h#{$i}, .h#{$i} {
-			font-family: $header-font;
-			font-size: $h-default - ($i * .15);
-		}
-	}
-}
-
-@include h-elements;
-
-// Paragraphs
-$line-height: 1.5em;
-
-p {
-	font-family: $content-font;
-	font-size: $font-size;
-	line-height: $line-height;
-}
-
-//////////////////////////////////////////////////
-// Nav Defaults
-//////////////////////////////////////////////////
-
-nav {
-	ul {
-		li {
-			display: block;
-			@media #{$medium} {
-				display: inline-block;
-			}
-		}
-	}
-}

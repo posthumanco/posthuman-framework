@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Gentium+Book+Basic:400,700,400italic,700italic);
+/* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126 License: none (public domain) */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -324,9 +326,7 @@ you can use the generic selector below, but it's slower:
     max-width: 100%; }
   .row .row {
     width: auto;
-    margin-left: -1%;
-    margin-right: -1%;
-    max-width: none; }
+    max-width: 100%; }
     .row .row:before, .row .row:after {
       content: " ";
       display: table; }
@@ -723,6 +723,85 @@ you can use the generic selector below, but it's slower:
     margin-left: auto;
     margin-right: auto;
     float: none !important; } }
+body {
+  font-size: 16px; }
+  @media only screen and (min-width: 768px) {
+    body {
+      font-size: 18px; } }
+  @media only screen and (min-width: 1024px) {
+    body {
+      font-size: 22px; } }
+
+h1, .h1 {
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.85em;
+  font-weight: 700;
+  margin-top: 1em; }
+
+h2, .h2 {
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.7em;
+  font-weight: 700;
+  margin-top: 1em; }
+
+h3, .h3 {
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.55em;
+  font-weight: 700;
+  margin-top: 1em; }
+
+h4, .h4 {
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-top: 1em; }
+
+h5, .h5 {
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.25em;
+  font-weight: 700;
+  margin-top: 1em; }
+
+h6, .h6 {
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-top: 1em; }
+
+p {
+  font-family: "Gentium Book Basic", Times, serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.61803;
+  margin: 1.5em 0; }
+
+ul {
+  margin-left: 1em;
+  margin-top: 1.5em; }
+  ul li {
+    line-height: 1.5em;
+    list-style-type: disc; }
+    ul li ul {
+      margin-top: 0; }
+
+ol {
+  margin-left: 1.4em; }
+  ol li {
+    line-height: 1.5em;
+    list-style-type: decimal; }
+
+dl dd {
+  margin-left: 1em;
+  line-height: 1.5em; }
+  dl dd:before {
+    content: "- "; }
+
+nav ul li {
+  display: block; }
+  @media only screen and (min-width: 768px) {
+    nav ul li {
+      display: inline-block; } }
+
 button, a.button, input[type=submit] {
   background: blue;
   border: none;
@@ -752,7 +831,7 @@ button, a.button, input[type=submit] {
     button.secondary:hover, a.button.secondary:hover, input[type=submit].secondary:hover {
       background: #86c5da; }
   button.disabled, a.button.disabled, input[type=submit].disabled {
-    background: gray; }
+    background: grey; }
     button.disabled:hover, a.button.disabled:hover, input[type=submit].disabled:hover {
       background: #676767; }
   button.alert, a.button.alert, input[type=submit].alert {
@@ -776,7 +855,7 @@ a {
     a.secondary:hover {
       background: #86c5da; }
   a.disabled {
-    color: gray; }
+    color: grey; }
     a.disabled:hover {
       background: #676767; }
   a.alert {
@@ -784,37 +863,11 @@ a {
     a.alert:hover {
       background: #cc0000; }
 
-h1, .h1 {
-  font-family: Helvetica;
-  font-size: 1.85em; }
+.banner {
+  margin-bottom: 1em; }
+  .banner img {
+    max-width: 100%;
+    width: 100%;
+    display: block; }
 
-h2, .h2 {
-  font-family: Helvetica;
-  font-size: 1.7em; }
-
-h3, .h3 {
-  font-family: Helvetica;
-  font-size: 1.55em; }
-
-h4, .h4 {
-  font-family: Helvetica;
-  font-size: 1.4em; }
-
-h5, .h5 {
-  font-family: Helvetica;
-  font-size: 1.25em; }
-
-h6, .h6 {
-  font-family: Helvetica;
-  font-size: 1.1em; }
-
-p {
-  font-family: Times;
-  font-size: 1em;
-  line-height: 1.5em; }
-
-nav ul li {
-  display: block; }
-  @media only screen and (min-width: 768px) {
-    nav ul li {
-      display: inline-block; } }
+/* Create default variables */

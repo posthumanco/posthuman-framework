@@ -3,6 +3,7 @@ layout: post
 title:  "Welcome to Jekyll Again!"
 date:   2013-11-13 10:31:44
 categories: jekyll update
+banner: http://www.fillmurray.com/g/2000/400
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
