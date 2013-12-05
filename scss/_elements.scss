@@ -48,44 +48,59 @@ $content-font-weight: 300 !default;
 
 // Paragraphs
 $line-height: 1.61803398875 !default;
+$p-margin: 1.5em 0 !default;
 
 p {
 	font-family: $content-font-family;
 	font-size: $content-font-size;
 	font-weight: $content-font-weight;
 	line-height: $line-height;
-	margin: 1.5em 0;
+	margin: $p-margin;
 }
 
 // Lists
-ul {
-	margin-left: 1em;
-	margin-top: 1.5em;
-	li {
-		line-height: 1.5em;
-		list-style-type: disc;
-		ul {
-			margin-top: 0;
+$ul-margin: 1.5em 0 1.5em 1em !default;
+$ol-margin: 1.5em 0 1.5em 1.4em !default;
+$dl-margin: 1.5em 0 1.5em 0 !default;
+@mixin child-list-margin-reset {
+	@each $list-type in ul, ol, dl {
+		#{$list-type} {
+			@extend #{$list-type};
+			margin-top: 0px;
+			margin-bottom: 0px;
 		}
 	}
 }
-ol {
-	margin-left: 1.4em;	
+
+ul {
+	margin: $ul-margin;
 	li {
-		line-height: 1.5em;
+		line-height: $line-height;
+		list-style-type: disc;
+		@include child-list-margin-reset;
+	}
+}
+ol {
+	margin: $ol-margin;
+	li {
+		line-height: $line-height;
 		list-style-type: decimal;
+		@include child-list-margin-reset;
 	}
 }
 dl {
+	margin: $dl-margin;
 	dd {
 		margin-left: 1em;
-		line-height: 1.5em;
+		line-height: $line-height;
 		&:before {
 			content: "- ";
 
 		}
 	}
 }
+
+/*Blockquote, cite*/
 
 //////////////////////////////////////////////////
 // Nav Defaults
