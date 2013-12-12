@@ -40,6 +40,7 @@ $content-font-weight: 300 !default;
 			font-size: $h-font-size - ($i * .15);
 			font-weight: $h-font-weight;
 			margin-top: 1em;
+			line-height: 1.2em;
 		}
 	}
 }
@@ -131,6 +132,11 @@ $alert: rgb(255, 0, 0) !default;
 	$alert-hover: darken($alert, 10%) !default;
 
 $button-type: primary $primary $primary-hover, secondary $secondary $secondary-hover, disabled $disabled $disabled-hover, alert $alert $alert-hover;
+
+
+$button-padding: .5em !default;
+$button-font-size: 1em !default;
+$button-border-radius: 2px !default;
 
 @mixin clickables() {
 	// generating other buttons

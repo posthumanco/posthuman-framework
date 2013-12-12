@@ -736,37 +736,43 @@ h1, .h1 {
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.85em;
   font-weight: 700;
-  margin-top: 1em; }
+  margin-top: 1em;
+  line-height: 1.2em; }
 
 h2, .h2 {
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.7em;
   font-weight: 700;
-  margin-top: 1em; }
+  margin-top: 1em;
+  line-height: 1.2em; }
 
 h3, .h3 {
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.55em;
   font-weight: 700;
-  margin-top: 1em; }
+  margin-top: 1em;
+  line-height: 1.2em; }
 
 h4, .h4 {
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.4em;
   font-weight: 700;
-  margin-top: 1em; }
+  margin-top: 1em;
+  line-height: 1.2em; }
 
 h5, .h5 {
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.25em;
   font-weight: 700;
-  margin-top: 1em; }
+  margin-top: 1em;
+  line-height: 1.2em; }
 
 h6, .h6 {
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.1em;
   font-weight: 700;
-  margin-top: 1em; }
+  margin-top: 1em;
+  line-height: 1.2em; }
 
 p {
   font-family: "Gentium Book Basic", Times, serif;
@@ -888,4 +894,10 @@ a {
     width: 100%;
     display: block; }
 
-/* Create default variables */
+.demo .row {
+  margin: .5em auto; }
+  .demo .row .columns {
+    background: #efefef;
+    border: 1px solid #aaa; }
+
+/* Form Elements */

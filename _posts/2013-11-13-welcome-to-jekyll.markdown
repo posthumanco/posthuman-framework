@@ -1,25 +1,35 @@
 ---
 layout: post
-title:  "Welcome to Jekyll Again!"
+title:  "DOCS"
 date:   2013-11-13 10:31:44
-categories: jekyll update
+categories: docs documentation
 banner: http://www.fillmurray.com/g/2000/400
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+##Grid System
 
-Jekyll also offers powerful support for code snippets:
+<div class="demo">
+	<div class="row">
+		<div class="small-12 medium-12 large-12 columns">
+			<p>12 columns</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 medium-9 large-9 columns">
+			<p>9 columns</p>
+		</div>
+		<div class="small-12 medium-3 large-3 columns">
+			<p>3 columns</p>
+		</div>
+	</div>
+</div>
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+<p>
+{% highlight html %}
+<div class="row">
+	<div class="small-12 medium-8 large-6 columns">
+		<p>Aliquam eget tempus risus. Morbi consequat turpis eu augue pellentesque bibendum.</p>
+	</div>
+</div>
 {% endhighlight %}
-
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
-
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
+</p>
