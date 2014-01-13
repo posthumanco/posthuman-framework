@@ -21,10 +21,16 @@ button, a.button, input[type=submit] {
 
 .demo {
 	.row {
-		margin: .5em auto;
+		margin: .2em auto;
 		.columns {
 			background: #efefef;
 			border: 1px solid #aaa;
+			color: #777;
+			// border-right: none;
+			padding: .5em;
+			&:last-child {
+				// border-right: 1px solid #aaa;
+			}
 		}
 	}
 }
