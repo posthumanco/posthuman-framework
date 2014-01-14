@@ -37,11 +37,14 @@ $content-font-weight: 300 !default;
 	@for $i from 1 through 6 {
 		h#{$i}, .h#{$i} {
 			font-family: $h-font-family;
-			font-size: $h-font-size - ($i * .15);
+			font-size: $h-font-size - ($i * .2);
 			font-weight: $h-font-weight;
 			margin-top: 1em;
 			margin-bottom: .5em;
 			line-height: 1.2em;
+			small {
+				font-size: $h-font-size - ($i * 1.5);
+			}
 		}
 	}
 }
@@ -106,6 +109,7 @@ dl {
 	}
 }
 
+//Code and code highlighting
 code {
 	background: #efefef;
 	color: #777;

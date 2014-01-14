@@ -68,3 +68,17 @@ banner: http://www.fillmurray.com/g/2000/400
 <button class="primary">default</button>
 <button class="primary large">.large</button>
 <button class="primary expand">.expand</button>
+
+##Headers
+
+#h1. Header
+
+##h2. Header
+
+###h3. Header
+
+####h4. Header
+
+#####h5. Header
+
+######h6. Header

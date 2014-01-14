@@ -1,13 +1,55 @@
+@mixin transition($duration: 0.5s) {
+	transition: color $duration, height $duration, transform $duration;
+		-webkit-transition: color $duration, height $duration, -webkit-transform $duration;
+		-moz-transition: color $duration, height $duration, -moz-transform $duration;
+}
+
 body {
-
-}
-
-p {
-	
-}
-
-button, a.button, input[type=submit] {
-
+	h1, .h1 {
+		border-bottom: 1px solid #aaa;
+	}
+	header {
+		&#header {
+			position: fixed;
+			height: 50px;
+			padding: 15px 0;
+			width: 100%;
+			background: rgba(255, 255, 255, 0.95);
+			top: 0;
+			z-index: 1000;
+			overflow: hidden;
+			@include transition;
+			@media #{$medium}, #{$large} {
+				height: 75px;
+				padding: 20px 0;
+			}
+			.ph-arrow-down {
+				position: fixed;
+				top: 16px;
+				right: 26px;
+				z-index: 9999;
+				@media #{$medium}, #{$large} {
+					display: none;
+				}
+			}
+			nav {
+				ul {
+					margin: 0;
+					.mobile-logo {
+						@media #{$medium}, #{$large} {
+							display: none;
+						}
+					}
+					.logo {
+						display: none;
+						@media #{$medium}, #{$large} {
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 .banner {
