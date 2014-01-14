@@ -51,3 +51,20 @@ banner: http://www.fillmurray.com/g/2000/400
 </div>
 {% endhighlight %}
 </p>
+
+##Buttons
+
+####Button colors
+
+<button class="primary small">.primary</button>
+<button class="secondary small">.secondary</button>
+<button class="alert small">.alert</button>
+<button class="disabled small">.disabled</button>
+
+####Button Sizes
+
+<button class="primary tiny">.tiny</button>
+<button class="primary small">.tiny</button>
+<button class="primary">default</button>
+<button class="primary large">.large</button>
+<button class="primary expand">.expand</button>

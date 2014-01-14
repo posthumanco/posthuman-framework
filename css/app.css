@@ -833,12 +833,16 @@ code, .highlight {
   color: #777;
   padding: .2em;
   border-radius: 3px; }
+  @media only screen {
+    code, .highlight {
+      padding: .1em; } }
 
 .highlight {
   padding: .5em;
   border: 1px solid #aaa; }
   .highlight code, .highlight .highlight {
-    background: none; }
+    background: none;
+    white-space: pre-wrap; }
 
 /*Blockquote, cite*/
 nav ul li {
@@ -873,13 +877,13 @@ button, a.button, input[type=submit] {
     button.primary:hover, a.button.primary:hover, input[type=submit].primary:hover {
       background: #2f63e5; }
   button.secondary, a.button.secondary, input[type=submit].secondary {
-    background: #38ff50; }
+    background: #00ed7a; }
     button.secondary:hover, a.button.secondary:hover, input[type=submit].secondary:hover {
-      background: #05ff23; }
+      background: #00ba60; }
   button.disabled, a.button.disabled, input[type=submit].disabled {
     background: #c8c7b8; }
     button.disabled:hover, a.button.disabled:hover, input[type=submit].disabled:hover {
-      background: #b2b09b; }
+      background: #c4c2b2; }
   button.alert, a.button.alert, input[type=submit].alert {
     background: #ff362a; }
     button.alert:hover, a.button.alert:hover, input[type=submit].alert:hover {
@@ -897,13 +901,13 @@ a {
     a.primary:hover {
       background: #2f63e5; }
   a.secondary {
-    color: #38ff50; }
+    color: #00ed7a; }
     a.secondary:hover {
-      background: #05ff23; }
+      background: #00ba60; }
   a.disabled {
     color: #c8c7b8; }
     a.disabled:hover {
-      background: #b2b09b; }
+      background: #c4c2b2; }
   a.alert {
     color: #ff362a; }
     a.alert:hover {
