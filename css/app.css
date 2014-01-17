@@ -340,7 +340,8 @@ you can use the generic selector below, but it's slower:
 .column, .columns {
   float: left;
   padding-left: 1%;
-  padding-right: 1%; }
+  padding-right: 1%;
+  width: 100%; }
 
 .left {
   float: left !important; }
@@ -723,6 +724,72 @@ you can use the generic selector below, but it's slower:
     margin-left: auto;
     margin-right: auto;
     float: none !important; } }
+button, a.button, input[type=submit] {
+  background: #5c85eb;
+  border: none;
+  padding: 0.5em;
+  font-size: 1em;
+  display: inline-block;
+  border-radius: 2px;
+  color: white; }
+  button:hover, a.button:hover, input[type=submit]:hover {
+    background: #2f63e5; }
+  button.tiny, a.button.tiny, input[type=submit].tiny {
+    padding: 0.5em;
+    font-size: 0.7em; }
+  button.small, a.button.small, input[type=submit].small {
+    padding: 0.5em;
+    font-size: 0.8em; }
+  button.large, a.button.large, input[type=submit].large {
+    padding: 0.9em;
+    font-size: 1.2em; }
+  button.expand, a.button.expand, input[type=submit].expand {
+    width: 100%; }
+  button.primary, a.button.primary, input[type=submit].primary {
+    background: #5c85eb; }
+    button.primary:hover, a.button.primary:hover, input[type=submit].primary:hover {
+      background: #2f63e5; }
+  button.secondary, a.button.secondary, input[type=submit].secondary {
+    background: #00ed7a; }
+    button.secondary:hover, a.button.secondary:hover, input[type=submit].secondary:hover {
+      background: #00ba60; }
+  button.disabled, a.button.disabled, input[type=submit].disabled {
+    background: #c8c7b8; }
+    button.disabled:hover, a.button.disabled:hover, input[type=submit].disabled:hover {
+      background: #c4c2b2; }
+  button.alert, a.button.alert, input[type=submit].alert {
+    background: #ff362a; }
+    button.alert:hover, a.button.alert:hover, input[type=submit].alert:hover {
+      background: #f60e00; }
+
+a {
+  color: #5c85eb;
+  text-decoration: none; }
+  a:visited {
+    color: #5c85eb; }
+  a:hover {
+    color: #2f63e5; }
+  a.primary {
+    color: #5c85eb; }
+    a.primary:hover {
+      background: #2f63e5; }
+  a.secondary {
+    color: #00ed7a; }
+    a.secondary:hover {
+      background: #00ba60; }
+  a.disabled {
+    color: #c8c7b8; }
+    a.disabled:hover {
+      background: #c4c2b2; }
+  a.alert {
+    color: #ff362a; }
+    a.alert:hover {
+      background: #f60e00; }
+
+img.fluid-image {
+  max-width: 100%;
+  height: auto; }
+
 body {
   font-size: 16px; }
   @media only screen and (min-width: 768px) {
@@ -840,11 +907,12 @@ dl, ul li dl, ol li dl {
     dl dd:before {
       content: "- "; }
 
+/* THIS AREA NEEDS VARIABLES */
 code, .highlight {
   background: #efefef;
   color: #777;
   padding: .2em;
-  border-radius: 3px; }
+  border-radius: 2px; }
   @media only screen {
     code, .highlight {
       padding: .1em; } }
@@ -856,115 +924,72 @@ code, .highlight {
     background: none;
     white-space: pre-wrap; }
 
-/*Blockquote, cite*/
+blockquote {
+  padding-left: 10px;
+  border-left: 5px solid #c8c7b8; }
+
+cite {
+  font-style: italic;
+  font-size: .8em;
+  display: block;
+  margin-top: 1em; }
+  cite:before {
+    content: "\2014 \0020"; }
+
 nav ul li {
   display: block; }
   @media only screen and (min-width: 768px) {
     nav ul li {
       display: inline-block; } }
 
-button, a.button, input[type=submit] {
-  background: #5c85eb;
-  border: none;
-  padding: 0.5em;
-  font-size: 1em;
-  display: inline-block;
-  border-radius: 2px;
-  color: white; }
-  button:hover, a.button:hover, input[type=submit]:hover {
-    background: #2f63e5; }
-  button.tiny, a.button.tiny, input[type=submit].tiny {
-    padding: 0.5em;
-    font-size: 0.7em; }
-  button.small, a.button.small, input[type=submit].small {
-    padding: 0.5em;
-    font-size: 0.8em; }
-  button.large, a.button.large, input[type=submit].large {
-    padding: 0.9em;
-    font-size: 1.2em; }
-  button.expand, a.button.expand, input[type=submit].expand {
-    width: 100%; }
-  button.primary, a.button.primary, input[type=submit].primary {
-    background: #5c85eb; }
-    button.primary:hover, a.button.primary:hover, input[type=submit].primary:hover {
-      background: #2f63e5; }
-  button.secondary, a.button.secondary, input[type=submit].secondary {
-    background: #00ed7a; }
-    button.secondary:hover, a.button.secondary:hover, input[type=submit].secondary:hover {
-      background: #00ba60; }
-  button.disabled, a.button.disabled, input[type=submit].disabled {
-    background: #c8c7b8; }
-    button.disabled:hover, a.button.disabled:hover, input[type=submit].disabled:hover {
-      background: #c4c2b2; }
-  button.alert, a.button.alert, input[type=submit].alert {
-    background: #ff362a; }
-    button.alert:hover, a.button.alert:hover, input[type=submit].alert:hover {
-      background: #f60e00; }
-
-a {
-  color: #5c85eb;
-  text-decoration: none; }
-  a:visited {
-    color: #5c85eb; }
-  a:hover {
-    color: #2f63e5; }
-  a.primary {
-    color: #5c85eb; }
-    a.primary:hover {
-      background: #2f63e5; }
-  a.secondary {
-    color: #00ed7a; }
-    a.secondary:hover {
-      background: #00ba60; }
-  a.disabled {
-    color: #c8c7b8; }
-    a.disabled:hover {
-      background: #c4c2b2; }
-  a.alert {
-    color: #ff362a; }
-    a.alert:hover {
-      background: #f60e00; }
-
-img.fluid-image {
-  max-width: 100%;
-  height: auto; }
-
-body h1, body .h1 {
-  border-bottom: 1px solid #aaa; }
-body header#header {
-  position: fixed;
-  height: 50px;
-  padding: 15px 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  top: 0;
-  z-index: 1000;
-  overflow: hidden;
-  transition: color 0.5s, height 0.5s, transform 0.5s;
-  -webkit-transition: color 0.5s, height 0.5s, -webkit-transform 0.5s;
-  -moz-transition: color 0.5s, height 0.5s, -moz-transform 0.5s; }
+body {
+  background: whitesmoke url("/images/bg.png");
+  margin-top: 50px; }
   @media only screen and (min-width: 768px), only screen and (min-width: 1024px) {
-    body header#header {
-      height: 75px;
-      padding: 20px 0; } }
-  body header#header .ph-arrow-down {
+    body {
+      margin-top: 75px; } }
+  body header#header {
     position: fixed;
-    top: 16px;
-    right: 26px;
-    z-index: 9999; }
+    height: 50px;
+    padding: 15px 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    top: 0;
+    z-index: 1000;
+    overflow: hidden;
+    transition: color 0.5s, height 0.5s, transform 0.5s;
+    -webkit-transition: color 0.5s, height 0.5s, -webkit-transform 0.5s;
+    -moz-transition: color 0.5s, height 0.5s, -moz-transform 0.5s; }
     @media only screen and (min-width: 768px), only screen and (min-width: 1024px) {
-      body header#header .ph-arrow-down {
-        display: none; } }
-  body header#header nav ul {
-    margin: 0; }
-    @media only screen and (min-width: 768px), only screen and (min-width: 1024px) {
-      body header#header nav ul .mobile-logo {
-        display: none; } }
-    body header#header nav ul .logo {
-      display: none; }
+      body header#header {
+        height: 75px;
+        padding: 16px 0; } }
+    body header#header .ph-arrow-down {
+      position: fixed;
+      top: 16px;
+      right: 26px;
+      z-index: 9999; }
       @media only screen and (min-width: 768px), only screen and (min-width: 1024px) {
-        body header#header nav ul .logo {
-          display: inline-block; } }
+        body header#header .ph-arrow-down {
+          display: none; } }
+    body header#header nav ul {
+      margin: 0; }
+      body header#header nav ul li {
+        color: red; }
+      body header#header nav ul .mobile-logo {
+        color: #323232; }
+        @media only screen and (min-width: 768px), only screen and (min-width: 1024px) {
+          body header#header nav ul .mobile-logo {
+            display: none; } }
+      body header#header nav ul .logo {
+        color: #323232;
+        font-size: 1.4em;
+        display: none; }
+        @media only screen and (min-width: 768px), only screen and (min-width: 1024px) {
+          body header#header nav ul .logo {
+            display: inline-block; } }
+  body .content .post {
+    margin-bottom: 3em; }
 
 .banner {
   margin-bottom: 1em; }
@@ -978,6 +1003,7 @@ body header#header {
   .demo .row .columns {
     background: #efefef;
     border: 1px solid #aaa;
+    border-radius: 2px;
     color: #777;
     padding: .5em; }
 

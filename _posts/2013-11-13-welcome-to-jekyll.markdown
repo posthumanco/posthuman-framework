@@ -24,17 +24,14 @@ banner: http://www.fillmurray.com/g/2000/400
 			</div>
 		</div>
 		<div class="row">
-			<div class="small-12 medium-3 large-3 columns">
-				3 columns
+			<div class="small-12 medium-4 large-4 columns">
+				4 columns
 			</div>
-			<div class="small-12 medium-3 large-3 columns">
-				3 columns
+			<div class="small-12 medium-4 large-4 columns">
+				4 columns
 			</div>
-			<div class="small-12 medium-3 large-3 columns">
-				3 columns
-			</div>
-			<div class="small-12 medium-3 large-3 columns">
-				3 columns
+			<div class="small-12 medium-4 large-4 columns">
+				4 columns
 			</div>
 		</div>
 	</div>
@@ -67,7 +64,7 @@ banner: http://www.fillmurray.com/g/2000/400
 <button class="primary small">.tiny</button>
 <button class="primary">default</button>
 <button class="primary large">.large</button>
-<button class="primary expand">.expand</button>
+<p><button class="primary expand large">.expand</button></p>
 
 ##Headers
 
@@ -82,3 +79,7 @@ banner: http://www.fillmurray.com/g/2000/400
 #####h5. Header
 
 ######h6. Header
+
+##Blockquotes
+
+> Suspendisse potenti. Aliquam dictum, diam sit amet mollis laoreet, metus urna ultricies neque, a tincidunt velit lorem eget justo. Curabitur non metus tempor, euismod lorem condimentum, suscipit quam. Vestibulum blandit massa sed euismod ultrices. Phasellus felis metus, sodales vitae odio eget, consectetur convallis lacus. Integer congue lorem sem, ac porttitor nibh elementum a. Donec ut justo dictum, auctor odio ac, cursus nunc. Vestibulum vel ante risus. Quisque erat tellus, dignissim a placerat at, rhoncus vitae nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque interdum risus in arcu placerat, eget consequat libero venenatis. Proin nec eleifend ligula. <cite>Nobody Important</cite>

@@ -5,8 +5,10 @@
 }
 
 body {
-	h1, .h1 {
-		border-bottom: 1px solid #aaa;
+	background: whitesmoke url('/images/bg.png');
+	margin-top: 50px;
+	@media #{$medium}, #{$large} {
+		margin-top: 75px;
 	}
 	header {
 		&#header {
@@ -21,7 +23,7 @@ body {
 			@include transition;
 			@media #{$medium}, #{$large} {
 				height: 75px;
-				padding: 20px 0;
+				padding: 16px 0;
 			}
 			.ph-arrow-down {
 				position: fixed;
@@ -35,12 +37,19 @@ body {
 			nav {
 				ul {
 					margin: 0;
+					li {
+						color: red;
+
+					}
 					.mobile-logo {
+						color: #323232;
 						@media #{$medium}, #{$large} {
 							display: none;
 						}
 					}
 					.logo {
+						color: #323232;
+						font-size: 1.4em;
 						display: none;
 						@media #{$medium}, #{$large} {
 							display: inline-block;
@@ -48,6 +57,12 @@ body {
 					}
 				}
 			}
+		}
+	}
+	.content {
+		
+		.post {
+			margin-bottom: 3em;
 		}
 	}
 }
@@ -67,12 +82,9 @@ body {
 		.columns {
 			background: #efefef;
 			border: 1px solid #aaa;
+			border-radius: $button-border-radius;
 			color: #777;
-			// border-right: none;
 			padding: .5em;
-			&:last-child {
-				// border-right: 1px solid #aaa;
-			}
 		}
 	}
 }

@@ -1,4 +1,94 @@
 //////////////////////////////////////////////////
+// Buttons and A elements
+//////////////////////////////////////////////////
+
+$primary: rgb(92, 133, 235) !default;
+	$primary-hover: darken($primary, 10%) !default;
+$secondary: rgb(0, 237, 122) !default;
+	$secondary-hover: darken($secondary, 10%) !default;
+$disabled: rgb(200, 199, 184) !default;
+	$disabled-hover: darken($disabled, 2%) !default;
+$alert: rgb(255, 54, 42) !default;
+	$alert-hover: darken($alert, 10%) !default;
+
+$button-type: primary $primary $primary-hover, secondary $secondary $secondary-hover, disabled $disabled $disabled-hover, alert $alert $alert-hover;
+
+
+$button-padding: .5em !default;
+$button-font-size: 1em !default;
+$button-border-radius: 2px !default;
+
+@mixin clickables() {
+	// generating other buttons
+	button, a.button, input[type=submit] {
+		background: $primary;
+		border: none;
+		padding: $button-padding;
+		font-size: $button-font-size;
+		display: inline-block;
+		border-radius: $button-border-radius;
+		color: white;
+		&:hover {
+			background: $primary-hover;
+		}
+		&.tiny {
+			padding: $button-padding;
+			font-size: $button-font-size - .3em;
+		}
+		&.small {
+			padding: $button-padding;
+			font-size: $button-font-size - .2em;
+		}
+		&.large {
+			padding: $button-padding + .4em;
+			font-size: $button-font-size + .2em;
+		}
+		&.expand {
+			width: 100%;
+		}
+		@each $type in $button-type {
+			&.#{nth($type, 1)} {
+				background: #{nth($type, 2)};
+				&:hover {
+					background: #{nth($type, 3)};
+				}
+			}
+		}
+	}
+	a {
+		color: $primary;
+		text-decoration: none;
+		&:visited {
+			color: $primary;
+		}
+		&:hover {
+			color: darken($primary, 10%);
+		}
+		@each $type in $button-type {
+			&.#{nth($type, 1)} {
+				color: #{nth($type, 2)};
+				&:hover {
+					background: #{nth($type, 3)};
+				}
+			}
+		}
+	}
+}
+
+@include clickables;
+
+//////////////////////////////////////////////////
+// Images
+//////////////////////////////////////////////////
+
+img {
+	&.fluid-image {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+//////////////////////////////////////////////////
 // Typography
 //////////////////////////////////////////////////
 
@@ -109,12 +199,14 @@ dl {
 	}
 }
 
+/* THIS AREA NEEDS VARIABLES */
+
 //Code and code highlighting
 code {
 	background: #efefef;
 	color: #777;
 	padding: .2em;
-	border-radius: 3px;
+	border-radius: $button-border-radius;
 	@media #{$small} {
 		padding: .1em;
 	}
@@ -130,7 +222,20 @@ code {
 	}
 }
 
-/*Blockquote, cite*/
+blockquote {
+	padding-left: 10px;
+	border-left: 5px solid $disabled;
+}
+
+cite {
+	font-style: italic;
+	font-size: .8em;
+	display: block;
+	margin-top: 1em;
+	&:before {
+		content: "\2014 \0020"
+	}
+}
 
 //////////////////////////////////////////////////
 // Nav Defaults
@@ -147,92 +252,3 @@ nav {
 	}
 }
 
-//////////////////////////////////////////////////
-// Buttons and A elements
-//////////////////////////////////////////////////
-
-$primary: rgb(92, 133, 235) !default;
-	$primary-hover: darken($primary, 10%) !default;
-$secondary: rgb(0, 237, 122) !default;
-	$secondary-hover: darken($secondary, 10%) !default;
-$disabled: rgb(200, 199, 184) !default;
-	$disabled-hover: darken($disabled, 2%) !default;
-$alert: rgb(255, 54, 42) !default;
-	$alert-hover: darken($alert, 10%) !default;
-
-$button-type: primary $primary $primary-hover, secondary $secondary $secondary-hover, disabled $disabled $disabled-hover, alert $alert $alert-hover;
-
-
-$button-padding: .5em !default;
-$button-font-size: 1em !default;
-$button-border-radius: 2px !default;
-
-@mixin clickables() {
-	// generating other buttons
-	button, a.button, input[type=submit] {
-		background: $primary;
-		border: none;
-		padding: $button-padding;
-		font-size: $button-font-size;
-		display: inline-block;
-		border-radius: $button-border-radius;
-		color: white;
-		&:hover {
-			background: $primary-hover;
-		}
-		&.tiny {
-			padding: $button-padding;
-			font-size: $button-font-size - .3em;
-		}
-		&.small {
-			padding: $button-padding;
-			font-size: $button-font-size - .2em;
-		}
-		&.large {
-			padding: $button-padding + .4em;
-			font-size: $button-font-size + .2em;
-		}
-		&.expand {
-			width: 100%;
-		}
-		@each $type in $button-type {
-			&.#{nth($type, 1)} {
-				background: #{nth($type, 2)};
-				&:hover {
-					background: #{nth($type, 3)};
-				}
-			}
-		}
-	}
-	a {
-		color: $primary;
-		text-decoration: none;
-		&:visited {
-			color: $primary;
-		}
-		&:hover {
-			color: darken($primary, 10%);
-		}
-		@each $type in $button-type {
-			&.#{nth($type, 1)} {
-				color: #{nth($type, 2)};
-				&:hover {
-					background: #{nth($type, 3)};
-				}
-			}
-		}
-	}
-}
-
-@include clickables;
-
-//////////////////////////////////////////////////
-// Images
-//////////////////////////////////////////////////
-
-img {
-	&.fluid-image {
-		max-width: 100%;
-		height: auto;
-	}
-}
