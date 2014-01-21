@@ -6,7 +6,7 @@ categories: docs documentation
 banner: http://www.fillmurray.com/g/2000/400
 ---
 
-##Grid System
+###Grid System
 
 <p>
 	<div class="demo">
@@ -49,16 +49,16 @@ banner: http://www.fillmurray.com/g/2000/400
 {% endhighlight %}
 </p>
 
-##Buttons
+###Buttons
 
-####Button colors
+#####Button colors
 
 <button class="primary small">.primary</button>
 <button class="secondary small">.secondary</button>
 <button class="alert small">.alert</button>
 <button class="disabled small">.disabled</button>
 
-####Button Sizes
+#####Button Sizes
 
 <button class="primary tiny">.tiny</button>
 <button class="primary small">.tiny</button>
@@ -66,7 +66,7 @@ banner: http://www.fillmurray.com/g/2000/400
 <button class="primary large">.large</button>
 <p><button class="primary expand large">.expand</button></p>
 
-##Headers
+###Headers
 
 #h1. Header
 
@@ -80,6 +80,6 @@ banner: http://www.fillmurray.com/g/2000/400
 
 ######h6. Header
 
-##Blockquotes
+###Blockquotes
 
 > Suspendisse potenti. Aliquam dictum, diam sit amet mollis laoreet, metus urna ultricies neque, a tincidunt velit lorem eget justo. Curabitur non metus tempor, euismod lorem condimentum, suscipit quam. Vestibulum blandit massa sed euismod ultrices. Phasellus felis metus, sodales vitae odio eget, consectetur convallis lacus. Integer congue lorem sem, ac porttitor nibh elementum a. Donec ut justo dictum, auctor odio ac, cursus nunc. Vestibulum vel ante risus. Quisque erat tellus, dignissim a placerat at, rhoncus vitae nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque interdum risus in arcu placerat, eget consequat libero venenatis. Proin nec eleifend ligula. <cite>Nobody Important</cite>

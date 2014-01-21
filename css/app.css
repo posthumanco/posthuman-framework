@@ -909,7 +909,7 @@ dl, ul li dl, ol li dl {
 
 /* THIS AREA NEEDS VARIABLES */
 code, .highlight {
-  background: #efefef;
+  background: #fff;
   color: #777;
   padding: .2em;
   border-radius: 2px; }
@@ -918,8 +918,7 @@ code, .highlight {
       padding: .1em; } }
 
 .highlight {
-  padding: .5em;
-  border: 1px solid #aaa; }
+  padding: .5em; }
   .highlight code, .highlight .highlight {
     background: none;
     white-space: pre-wrap; }
@@ -945,7 +944,10 @@ nav ul li {
 body {
   background: whitesmoke url("/images/bg.png");
   margin-top: 50px; }
-  @media only screen and (min-width: 768px), only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 768px) {
+    body {
+      margin-top: 60px; } }
+  @media only screen and (min-width: 1024px) {
     body {
       margin-top: 75px; } }
   body header#header {
@@ -960,10 +962,14 @@ body {
     transition: color 0.5s, height 0.5s, transform 0.5s;
     -webkit-transition: color 0.5s, height 0.5s, -webkit-transform 0.5s;
     -moz-transition: color 0.5s, height 0.5s, -moz-transform 0.5s; }
-    @media only screen and (min-width: 768px), only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 768px) {
+      body header#header {
+        height: 60px;
+        padding: 12px 0; } }
+    @media only screen and (min-width: 1024px) {
       body header#header {
         height: 75px;
-        padding: 16px 0; } }
+        padding: 13px 0; } }
     body header#header .ph-arrow-down {
       position: fixed;
       top: 16px;
@@ -975,19 +981,39 @@ body {
     body header#header nav ul {
       margin: 0; }
       body header#header nav ul li {
-        color: red; }
-      body header#header nav ul .mobile-logo {
-        color: #323232; }
-        @media only screen and (min-width: 768px), only screen and (min-width: 1024px) {
-          body header#header nav ul .mobile-logo {
-            display: none; } }
-      body header#header nav ul .logo {
-        color: #323232;
-        font-size: 1.4em;
-        display: none; }
-        @media only screen and (min-width: 768px), only screen and (min-width: 1024px) {
-          body header#header nav ul .logo {
-            display: inline-block; } }
+        margin: 0 1em;
+        vertical-align: middle; }
+        body header#header nav ul li a {
+          color: red;
+          font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+          text-transform: uppercase; }
+          @media only screen and (min-width: 768px) {
+            body header#header nav ul li a {
+              font-size: 1em; } }
+          @media only screen and (min-width: 1024px) {
+            body header#header nav ul li a {
+              font-size: .8em; } }
+        body header#header nav ul li.mobile-logo {
+          margin-bottom: 10px !important; }
+          @media only screen and (min-width: 768px), only screen and (min-width: 1024px) {
+            body header#header nav ul li.mobile-logo {
+              display: none; } }
+          body header#header nav ul li.mobile-logo a {
+            color: #323232;
+            font-size: 1em; }
+        body header#header nav ul li.logo {
+          display: none; }
+          @media only screen and (min-width: 768px), only screen and (min-width: 1024px) {
+            body header#header nav ul li.logo {
+              display: inline-block; } }
+          body header#header nav ul li.logo a {
+            color: #323232; }
+            @media only screen and (min-width: 768px) {
+              body header#header nav ul li.logo a {
+                font-size: 1.3em; } }
+            @media only screen and (min-width: 1024px) {
+              body header#header nav ul li.logo a {
+                font-size: 1.4em; } }
   body .content .post {
     margin-bottom: 3em; }
 
@@ -1001,8 +1027,8 @@ body {
 .demo .row {
   margin: .2em auto; }
   .demo .row .columns {
-    background: #efefef;
-    border: 1px solid #aaa;
+    background: #fff;
+    border: 1px solid #d6d6d6;
     border-radius: 2px;
     color: #777;
     padding: .5em; }

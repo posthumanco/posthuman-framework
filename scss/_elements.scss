@@ -203,7 +203,7 @@ dl {
 
 //Code and code highlighting
 code {
-	background: #efefef;
+	background: #fff;
 	color: #777;
 	padding: .2em;
 	border-radius: $button-border-radius;
@@ -215,7 +215,7 @@ code {
 .highlight {
 	@extend code;
 	padding: .5em;
-	border: 1px solid #aaa;
+	// border: 1px solid #aaa;
 	code {
 		background: none;
 		white-space: pre-wrap;

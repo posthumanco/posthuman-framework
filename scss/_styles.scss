@@ -7,7 +7,10 @@
 body {
 	background: whitesmoke url('/images/bg.png');
 	margin-top: 50px;
-	@media #{$medium}, #{$large} {
+	@media #{$medium} {
+		margin-top: 60px;
+	}
+	@media #{$large} {
 		margin-top: 75px;
 	}
 	header {
@@ -21,9 +24,13 @@ body {
 			z-index: 1000;
 			overflow: hidden;
 			@include transition;
-			@media #{$medium}, #{$large} {
+			@media #{$medium} {
+				height: 60px;
+				padding: 12px 0;
+			}
+			@media #{$large} {
 				height: 75px;
-				padding: 16px 0;
+				padding: 13px 0;
 			}
 			.ph-arrow-down {
 				position: fixed;
@@ -38,21 +45,43 @@ body {
 				ul {
 					margin: 0;
 					li {
-						color: red;
-
-					}
-					.mobile-logo {
-						color: #323232;
-						@media #{$medium}, #{$large} {
-							display: none;
+						margin: 0 1em;
+						vertical-align: middle;
+						a {
+							color: red;
+							font-family: $h-font-family;
+							text-transform: uppercase;
+							@media #{$medium} {
+								font-size: 1em;
+							}
+							@media #{$large} {
+								font-size: .8em;
+							}
 						}
-					}
-					.logo {
-						color: #323232;
-						font-size: 1.4em;
-						display: none;
-						@media #{$medium}, #{$large} {
-							display: inline-block;
+						&.mobile-logo {
+							margin-bottom: 10px !important;
+							@media #{$medium}, #{$large} {
+								display: none;
+							}
+							a {
+								color: #323232;
+								font-size: 1em;
+							}
+						}
+						&.logo {
+							display: none;
+							@media #{$medium}, #{$large} {
+								display: inline-block;
+							}
+							a {
+								color: #323232;
+								@media #{$medium} {
+									font-size: 1.3em;
+								}
+								@media #{$large} {
+									font-size: 1.4em;
+								}
+							}
 						}
 					}
 				}
@@ -80,8 +109,8 @@ body {
 	.row {
 		margin: .2em auto;
 		.columns {
-			background: #efefef;
-			border: 1px solid #aaa;
+			background: #fff;
+			border: 1px solid #d6d6d6;
 			border-radius: $button-border-radius;
 			color: #777;
 			padding: .5em;

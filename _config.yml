@@ -1,3 +1,4 @@
-name: Your New Jekyll Site
+name: Posthuman
 markdown: redcarpet
 pygments: true
+pagination: 1
