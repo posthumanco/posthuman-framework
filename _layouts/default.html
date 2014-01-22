@@ -5,13 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
-
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/syntax.css">
-
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/app.css">
-
+        <!-- jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     </head>
     <body>
       <div class="row full-width collapse nav text-center"><!--nav wrapper-->
@@ -22,7 +21,7 @@
               <ul>
                 <li class="mobile-logo"><a href="#"><i class="ph-posthuman_text"></i></a></li>
                 <li><a href="#">Posts</a></li>
-                <li><a href="#">Tags</a></li>
+                <li><a href="tags.html">Tags</a></li>
                 <li class="logo"><a href="/"><i class="ph-posthuman_text"></i></a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Search</a></li>
@@ -36,5 +35,12 @@
           {{ content }}
         </div>
       </div>
+      <script type="text/javascript">
+        $(document).ready(
+          $('.menu-toggle').click(
+            $('#header').toggleClass('active');
+          )
+        )
+      </script>
     </body>
 </html>

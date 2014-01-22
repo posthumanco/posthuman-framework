@@ -3,7 +3,6 @@
 		-webkit-transition: color $duration, height $duration, -webkit-transform $duration;
 		-moz-transition: color $duration, height $duration, -moz-transform $duration;
 }
-
 body {
 	background: whitesmoke url('/images/bg.png');
 	margin-top: 50px;
@@ -32,6 +31,9 @@ body {
 				height: 75px;
 				padding: 13px 0;
 			}
+			&.expanded {
+				height: auto;
+			}
 			.ph-arrow-down {
 				position: fixed;
 				top: 16px;
@@ -56,6 +58,9 @@ body {
 							}
 							@media #{$large} {
 								font-size: .8em;
+							}
+							&:hover {
+								color: darken(red, 10%);
 							}
 						}
 						&.mobile-logo {

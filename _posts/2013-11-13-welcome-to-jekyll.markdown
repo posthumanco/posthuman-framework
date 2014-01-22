@@ -3,7 +3,6 @@ layout: post
 title:  "DOCS"
 date:   2013-11-13 10:31:44
 categories: docs documentation
-banner: http://www.fillmurray.com/g/2000/400
 ---
 
 ###Grid System

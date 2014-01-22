@@ -970,6 +970,8 @@ body {
       body header#header {
         height: 75px;
         padding: 13px 0; } }
+    body header#header.expanded {
+      height: auto; }
     body header#header .ph-arrow-down {
       position: fixed;
       top: 16px;
@@ -993,6 +995,8 @@ body {
           @media only screen and (min-width: 1024px) {
             body header#header nav ul li a {
               font-size: .8em; } }
+          body header#header nav ul li a:hover {
+            color: #cc0000; }
         body header#header nav ul li.mobile-logo {
           margin-bottom: 10px !important; }
           @media only screen and (min-width: 768px), only screen and (min-width: 1024px) {
