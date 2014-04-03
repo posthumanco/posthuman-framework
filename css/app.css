@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Gentium+Book+Basic:400,700,400italic,700italic);
 /* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126 License: none (public domain) */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Gentium+Book+Basic:400,700,400italic,700italic);
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, .highlight, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, ul li dl, ol li dl, dt, dd, ol, ul li ol, ol li ol, ul, ul li ul, ol li ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -39,7 +39,6 @@ table {
   src: url("fonts/posthuman.eot?#iefix") format("embedded-opentype"), url("fonts/posthuman.woff") format("woff"), url("fonts/posthuman.ttf") format("truetype"), url("fonts/posthuman.svg#posthuman") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
   font-family: 'posthuman';
@@ -543,7 +542,13 @@ you can use the generic selector below, but it's slower:
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    float: none !important; } }
+    float: none !important; }
+
+  .small-uncentered {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important; } }
 @media only screen and (min-width: 768px) {
   .medium-1 {
     width: 8.33333%;
@@ -633,7 +638,13 @@ you can use the generic selector below, but it's slower:
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    float: none !important; } }
+    float: none !important; }
+
+  .medium-uncentered {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important; } }
 @media only screen and (min-width: 1024px) {
   .large-1 {
     width: 8.33333%;
@@ -723,7 +734,183 @@ you can use the generic selector below, but it's slower:
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    float: none !important; } }
+    float: none !important; }
+
+  .large-uncentered {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important; } }
+@media only screen {
+  body {
+    font-size: 19px; } }
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 20px; } }
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 22px; } }
+
+h1, .h1 {
+  color: black;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.6em;
+  font-weight: 700;
+  margin: 0 0 1.1em 0;
+  line-height: 1.2em; }
+  h1 a, .h1 a {
+    font-weight: 700; }
+  h1 small, .h1 small {
+    font-size: 0.4em;
+    display: block; }
+
+h2, .h2 {
+  color: black;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.4em;
+  font-weight: 700;
+  margin: 0 0 1.1em 0;
+  line-height: 1.2em; }
+  h2 a, .h2 a {
+    font-weight: 700; }
+  h2 small, .h2 small {
+    font-size: -1.0em;
+    display: block; }
+
+h3, .h3 {
+  color: black;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0 0 1.1em 0;
+  line-height: 1.2em; }
+  h3 a, .h3 a {
+    font-weight: 700; }
+  h3 small, .h3 small {
+    font-size: -2.4em;
+    display: block; }
+
+h4, .h4 {
+  color: black;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  margin: 0 0 1.1em 0;
+  line-height: 1.2em; }
+  h4 a, .h4 a {
+    font-weight: 700; }
+  h4 small, .h4 small {
+    font-size: -3.8em;
+    display: block; }
+
+h5, .h5 {
+  color: black;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 0.8em;
+  font-weight: 700;
+  margin: 0 0 1.1em 0;
+  line-height: 1.2em; }
+  h5 a, .h5 a {
+    font-weight: 700; }
+  h5 small, .h5 small {
+    font-size: -5.2em;
+    display: block; }
+
+h6, .h6 {
+  color: black;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 0.6em;
+  font-weight: 700;
+  margin: 0 0 1.1em 0;
+  line-height: 1.2em; }
+  h6 a, .h6 a {
+    font-weight: 700; }
+  h6 small, .h6 small {
+    font-size: -6.6em;
+    display: block; }
+
+i {
+  font-style: italic; }
+
+p, ul, ul li ul, ol li ul, ol, ul li ol, ol li ol, dl, ul li dl, ol li dl {
+  margin: 0 0 1.5em 0;
+  font-family: "Gentium Book Basic", Times, serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5; }
+
+strong {
+  font-weight: 700; }
+
+ul, ul li ul, ol li ul {
+  margin: 1.5em 0 1.5em 1em;
+  line-height: 0; }
+  ul li, ul li ul li, ol li ul li {
+    line-height: 1.5;
+    list-style-type: disc; }
+    ul li ul {
+      margin-top: 0px;
+      margin-bottom: 0px; }
+    ul li ol {
+      margin-top: 0px;
+      margin-bottom: 0px; }
+    ul li dl {
+      margin-top: 0px;
+      margin-bottom: 0px; }
+
+ol, ul li ol, ol li ol {
+  margin: 1.5em 0 1.5em 1.4em;
+  line-height: 0; }
+  ol li, ul li ol li, ol li ol li {
+    line-height: 1.5;
+    list-style-type: decimal; }
+    ol li ul {
+      margin-top: 0px;
+      margin-bottom: 0px; }
+    ol li ol {
+      margin-top: 0px;
+      margin-bottom: 0px; }
+    ol li dl {
+      margin-top: 0px;
+      margin-bottom: 0px; }
+
+dl, ul li dl, ol li dl {
+  margin: 1.5em 0 1.5em 0;
+  line-height: 0; }
+  dl dd, ul li dl dd, ol li dl dd {
+    margin-left: 1em;
+    line-height: 1.5; }
+    dl dd:before {
+      content: "- "; }
+
+/* THIS AREA NEEDS VARIABLES */
+code, .highlight {
+  background: #fff;
+  color: #777;
+  padding: .2em;
+  border-radius: 2px; }
+  @media only screen {
+    code, .highlight {
+      padding: .1em; } }
+
+.highlight {
+  padding: .5em; }
+  .highlight code, .highlight .highlight {
+    background: none;
+    white-space: pre-wrap; }
+
+blockquote {
+  padding-left: 10px;
+  border-left: 5px solid #c8c7b8; }
+
+cite {
+  font-style: italic;
+  font-size: .8em;
+  display: block;
+  margin-top: 1em; }
+  cite:before {
+    content: "\2014 \0020"; }
+
 button, a.button, input[type=submit] {
   background: #5c85eb;
   border: none;
@@ -731,7 +918,7 @@ button, a.button, input[type=submit] {
   font-size: 1em;
   display: inline-block;
   border-radius: 2px;
-  color: white; }
+  color: white !important; }
   button:hover, a.button:hover, input[type=submit]:hover {
     background: #2f63e5; }
   button.tiny, a.button.tiny, input[type=submit].tiny {
@@ -764,7 +951,10 @@ button, a.button, input[type=submit] {
 
 a {
   color: #5c85eb;
-  text-decoration: none; }
+  text-decoration: none;
+  font-family: "Gentium Book Basic", Times, serif;
+  font-size: 1em;
+  font-weight: 400; }
   a:visited {
     color: #5c85eb; }
   a:hover {
@@ -772,174 +962,34 @@ a {
   a.primary {
     color: #5c85eb; }
     a.primary:hover {
-      background: #2f63e5; }
+      color: #2f63e5; }
   a.secondary {
     color: #00ed7a; }
     a.secondary:hover {
-      background: #00ba60; }
+      color: #00ba60; }
   a.disabled {
     color: #c8c7b8; }
     a.disabled:hover {
-      background: #c4c2b2; }
+      color: #c4c2b2; }
   a.alert {
     color: #ff362a; }
     a.alert:hover {
-      background: #f60e00; }
+      color: #f60e00; }
 
 img.fluid-image {
   max-width: 100%;
   height: auto; }
 
-body {
-  font-size: 16px; }
-  @media only screen and (min-width: 768px) {
-    body {
-      font-size: 18px; } }
-  @media only screen and (min-width: 1024px) {
-    body {
-      font-size: 22px; } }
-
-h1, .h1 {
-  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 1.8em;
-  font-weight: 700;
-  margin-top: 1em;
-  margin-bottom: .5em;
-  line-height: 1.2em; }
-  h1 small, .h1 small {
-    font-size: 0.5em; }
-
-h2, .h2 {
-  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 1.6em;
-  font-weight: 700;
-  margin-top: 1em;
-  margin-bottom: .5em;
-  line-height: 1.2em; }
-  h2 small, .h2 small {
-    font-size: -1em; }
-
-h3, .h3 {
-  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 1.4em;
-  font-weight: 700;
-  margin-top: 1em;
-  margin-bottom: .5em;
-  line-height: 1.2em; }
-  h3 small, .h3 small {
-    font-size: -2.5em; }
-
-h4, .h4 {
-  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 1.2em;
-  font-weight: 700;
-  margin-top: 1em;
-  margin-bottom: .5em;
-  line-height: 1.2em; }
-  h4 small, .h4 small {
-    font-size: -4em; }
-
-h5, .h5 {
-  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 1em;
-  font-weight: 700;
-  margin-top: 1em;
-  margin-bottom: .5em;
-  line-height: 1.2em; }
-  h5 small, .h5 small {
-    font-size: -5.5em; }
-
-h6, .h6 {
-  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 0.8em;
-  font-weight: 700;
-  margin-top: 1em;
-  margin-bottom: .5em;
-  line-height: 1.2em; }
-  h6 small, .h6 small {
-    font-size: -7em; }
-
-p {
-  font-family: "Gentium Book Basic", Times, serif;
-  font-size: 1em;
-  font-weight: 300;
-  line-height: 1.61803;
-  margin: 1.5em 0; }
-
-strong {
-  font-weight: 700; }
-
-ul, ul li ul, ol li ul {
-  margin: 1.5em 0 1.5em 1em; }
-  ul li, ul li ul li, ol li ul li {
-    line-height: 1.61803;
-    list-style-type: disc; }
-    ul li ul {
-      margin-top: 0px;
-      margin-bottom: 0px; }
-    ul li ol {
-      margin-top: 0px;
-      margin-bottom: 0px; }
-    ul li dl {
-      margin-top: 0px;
-      margin-bottom: 0px; }
-
-ol, ul li ol, ol li ol {
-  margin: 1.5em 0 1.5em 1.4em; }
-  ol li, ul li ol li, ol li ol li {
-    line-height: 1.61803;
-    list-style-type: decimal; }
-    ol li ul {
-      margin-top: 0px;
-      margin-bottom: 0px; }
-    ol li ol {
-      margin-top: 0px;
-      margin-bottom: 0px; }
-    ol li dl {
-      margin-top: 0px;
-      margin-bottom: 0px; }
-
-dl, ul li dl, ol li dl {
-  margin: 1.5em 0 1.5em 0; }
-  dl dd, ul li dl dd, ol li dl dd {
-    margin-left: 1em;
-    line-height: 1.61803; }
-    dl dd:before {
-      content: "- "; }
-
-/* THIS AREA NEEDS VARIABLES */
-code, .highlight {
-  background: #fff;
-  color: #777;
-  padding: .2em;
-  border-radius: 2px; }
-  @media only screen {
-    code, .highlight {
-      padding: .1em; } }
-
-.highlight {
-  padding: .5em; }
-  .highlight code, .highlight .highlight {
-    background: none;
-    white-space: pre-wrap; }
-
-blockquote {
-  padding-left: 10px;
-  border-left: 5px solid #c8c7b8; }
-
-cite {
-  font-style: italic;
-  font-size: .8em;
-  display: block;
-  margin-top: 1em; }
-  cite:before {
-    content: "\2014 \0020"; }
-
-nav ul li {
-  display: block; }
-  @media only screen and (min-width: 768px) {
-    nav ul li {
-      display: inline-block; } }
+nav ul, nav ul li ul, ul li nav ul, nav ol li ul, ol li nav ul {
+  margin: 0; }
+  nav ul li {
+    display: block; }
+    @media only screen and (min-width: 768px) {
+      nav ul li {
+        display: inline-block; } }
+    nav ul li a {
+      font-weight: 300;
+      background-image: none; }
 
 body {
   background: whitesmoke url("/images/bg.png");
@@ -1019,7 +1069,7 @@ body {
               body header#header nav ul li.logo a {
                 font-size: 1.4em; } }
   body .content .post {
-    margin-bottom: 3em; }
+    margin-bottom: 2em; }
 
 .banner {
   margin-bottom: 1em; }

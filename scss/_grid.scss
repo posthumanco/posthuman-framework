@@ -2,9 +2,14 @@ $total-columns: 12 !default;
 $column-gutter: 2% !default;
 $max-row-width: 1224px !default;
 
-$small: "only screen" !default;
+$screen-enabled: false !default;
+$extra-large-enabled: false !default;
+
+$screen: if($screen-enabled == true, "only screen", null) !default;
+$small: if($screen-enabled == true, "only screen and (min-width: 600px)", "only screen") !default;
 $medium: "only screen and (min-width: 768px)" !default;
 $large: "only screen and (min-width: 1024px)" !default;
+$extra-large: if($extra-large-enabled == true, "only screen and (min-width: 1300px)", null) !default;
 
 //////////////////////////////////////////////////
 // Column Generator
@@ -38,6 +43,12 @@ $large: "only screen and (min-width: 1024px)" !default;
 			margin-right: auto;
 			float: none !important;
 		}
+		.#{$size}-uncentered {
+			position: relative;
+			margin-left: 0;
+			margin-right: 0;
+			float: left !important;
+		}
 	}
 }
 
@@ -69,7 +80,7 @@ $large: "only screen and (min-width: 1024px)" !default;
     	max-width: 100%;
     	&:before, &:after {
 			content: " ";
-	    	display: table;
+			display: table;
 	    }
 	    &:after {
 	    	clear: both;
@@ -117,6 +128,12 @@ $large: "only screen and (min-width: 1024px)" !default;
 
 @include columns(pull);
 
+@if $screen-enabled == true {
+	@media #{$screen} {
+		@include columns(screen);	
+	}
+}
+
 @media #{$small} {
 	@include columns(small);	
 }
@@ -127,4 +144,10 @@ $large: "only screen and (min-width: 1024px)" !default;
 
 @media #{$large} {
 	@include columns(large);
+}
+
+@if $extra-large-enabled == true {
+	@media #{$extra-large} {
+		@include columns(extra-large);
+	}
 }

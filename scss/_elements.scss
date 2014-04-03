@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////
-// Buttons and A elements
+// Colors
 //////////////////////////////////////////////////
 
 $primary: rgb(92, 133, 235) !default;
@@ -11,99 +11,53 @@ $disabled: rgb(200, 199, 184) !default;
 $alert: rgb(255, 54, 42) !default;
 	$alert-hover: darken($alert, 10%) !default;
 
-$button-type: primary $primary $primary-hover, secondary $secondary $secondary-hover, disabled $disabled $disabled-hover, alert $alert $alert-hover;
-
-
-$button-padding: .5em !default;
-$button-font-size: 1em !default;
-$button-border-radius: 2px !default;
-
-@mixin clickables() {
-	// generating other buttons
-	button, a.button, input[type=submit] {
-		background: $primary;
-		border: none;
-		padding: $button-padding;
-		font-size: $button-font-size;
-		display: inline-block;
-		border-radius: $button-border-radius;
-		color: white;
-		&:hover {
-			background: $primary-hover;
-		}
-		&.tiny {
-			padding: $button-padding;
-			font-size: $button-font-size - .3em;
-		}
-		&.small {
-			padding: $button-padding;
-			font-size: $button-font-size - .2em;
-		}
-		&.large {
-			padding: $button-padding + .4em;
-			font-size: $button-font-size + .2em;
-		}
-		&.expand {
-			width: 100%;
-		}
-		@each $type in $button-type {
-			&.#{nth($type, 1)} {
-				background: #{nth($type, 2)};
-				&:hover {
-					background: #{nth($type, 3)};
-				}
-			}
-		}
-	}
-	a {
-		color: $primary;
-		text-decoration: none;
-		&:visited {
-			color: $primary;
-		}
-		&:hover {
-			color: darken($primary, 10%);
-		}
-		@each $type in $button-type {
-			&.#{nth($type, 1)} {
-				color: #{nth($type, 2)};
-				&:hover {
-					background: #{nth($type, 3)};
-				}
-			}
-		}
-	}
-}
-
-@include clickables;
-
-//////////////////////////////////////////////////
-// Images
-//////////////////////////////////////////////////
-
-img {
-	&.fluid-image {
-		max-width: 100%;
-		height: auto;
-	}
-}
+$border-radius: 2px !default;
 
 //////////////////////////////////////////////////
 // Typography
 //////////////////////////////////////////////////
 
-$em-reset-screen: 16px !default;
-$em-reset-medium: 18px !default;
+// em Resets
+$em-reset-screen: 18px !default;
+$em-reset-small: 19px !default;
+$em-reset-medium: 20px !default;
 $em-reset-large: 22px !default;
+$em-reset-extra-large: 24px !default;
 
-// em Reset
+// Font Families
+$h-font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
+$content-font-family: "Gentium Book Basic", Times, serif !default;
+
+// Font Sizes
+$h-font-color: black;
+$h-font-size: 1.8em !default;
+$h-font-weight: 700 !default;
+$content-font-size: 1em !default;
+$content-font-weight: 300 !default;
+
+// Line Heights & Element Margins
+$line-height: 1.5 !default;
+$p-margin: 0 0 1.5em 0 !default;
+$h-margin: 0 0 1.1em 0 !default;
+
+// em Reset, Font Families
 body {
-	font-size: $em-reset-screen;
+	@if $screen-enabled == true {
+		font-size: $em-reset-screen;
+	}
+	@media #{$small} {
+		font-size: $em-reset-small;
+	}
 	@media #{$medium} {
 		font-size: $em-reset-medium;
 	}
 	@media #{$large} {
 		font-size: $em-reset-large;
+	}
+	@if $extra-large-enabled == true {
+		@media #{$extra-large} {
+			font-size: $em-reset-extra-large;
+		}
 	}
 }
 
@@ -113,27 +67,21 @@ $import-default-fonts: true !default;
 	@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Gentium+Book+Basic:400,700,400italic,700italic);
 } 
 
-// Font Families
-$h-font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
-$content-font-family: "Gentium Book Basic", Times, serif !default;
-
-// Font Sizes
-$h-font-size: 2em !default;
-$h-font-weight: 700 !default;
-$content-font-size: 1em !default;
-$content-font-weight: 300 !default;
-
 @mixin h-elements {
 	@for $i from 1 through 6 {
 		h#{$i}, .h#{$i} {
+			color: $h-font-color;
 			font-family: $h-font-family;
 			font-size: $h-font-size - ($i * .2);
 			font-weight: $h-font-weight;
-			margin-top: 1em;
-			margin-bottom: .5em;
+			margin: $h-margin;
 			line-height: 1.2em;
+			a {
+				font-weight: $h-font-weight;
+			}
 			small {
-				font-size: $h-font-size - ($i * 1.5);
+				font-size: $h-font-size - ($i * 1.4);
+				display: block;
 			}
 		}
 	}
@@ -141,16 +89,16 @@ $content-font-weight: 300 !default;
 
 @include h-elements;
 
-// Paragraphs
-$line-height: 1.61803398875 !default;
-$p-margin: 1.5em 0 !default;
+i {
+	font-style: italic;
+}
 
-p {
+p, ul, ol, dl {
+	margin: $p-margin;
 	font-family: $content-font-family;
 	font-size: $content-font-size;
 	font-weight: $content-font-weight;
 	line-height: $line-height;
-	margin: $p-margin;
 }
 
 strong {
@@ -173,6 +121,7 @@ $dl-margin: 1.5em 0 1.5em 0 !default;
 
 ul {
 	margin: $ul-margin;
+	line-height: 0;
 	li {
 		line-height: $line-height;
 		list-style-type: disc;
@@ -181,6 +130,7 @@ ul {
 }
 ol {
 	margin: $ol-margin;
+	line-height: 0;
 	li {
 		line-height: $line-height;
 		list-style-type: decimal;
@@ -189,6 +139,7 @@ ol {
 }
 dl {
 	margin: $dl-margin;
+	line-height: 0;
 	dd {
 		margin-left: 1em;
 		line-height: $line-height;
@@ -206,7 +157,7 @@ code {
 	background: #fff;
 	color: #777;
 	padding: .2em;
-	border-radius: $button-border-radius;
+	border-radius: $border-radius;
 	@media #{$small} {
 		padding: .1em;
 	}
@@ -238,15 +189,103 @@ cite {
 }
 
 //////////////////////////////////////////////////
+// Buttons and A elements
+//////////////////////////////////////////////////
+
+$button-type: primary $primary $primary-hover, secondary $secondary $secondary-hover, disabled $disabled $disabled-hover, alert $alert $alert-hover;
+
+
+$button-padding: .5em !default;
+$button-font-size: 1em !default;
+
+@mixin clickables() {
+	// generating other buttons
+	button, a.button, input[type=submit] {
+		background: $primary;
+		border: none;
+		padding: $button-padding;
+		font-size: $button-font-size;
+		display: inline-block;
+		border-radius: $border-radius;
+		color: white !important;
+		&:hover {
+			background: $primary-hover;
+		}
+		&.tiny {
+			padding: $button-padding;
+			font-size: $button-font-size - .3em;
+		}
+		&.small {
+			padding: $button-padding;
+			font-size: $button-font-size - .2em;
+		}
+		&.large {
+			padding: $button-padding + .4em;
+			font-size: $button-font-size + .2em;
+		}
+		&.expand {
+			width: 100%;
+		}
+		@each $type in $button-type {
+			&.#{nth($type, 1)} {
+				background: #{nth($type, 2)};
+				&:hover {
+					background: #{nth($type, 3)};
+				}
+			}
+		}
+	}
+	a {
+		color: $primary;
+		text-decoration: none;
+		font-family: $content-font-family;
+		font-size: $content-font-size;
+		font-weight: 400;
+		&:visited {
+			color: $primary;
+		}
+		&:hover {
+			color: $primary-hover;
+		}
+		@each $type in $button-type {
+			&.#{nth($type, 1)} {
+				color: #{nth($type, 2)};
+				&:hover {
+					color: #{nth($type, 3)};
+				}
+			}
+		}
+	}
+}
+
+@include clickables;
+
+//////////////////////////////////////////////////
+// Images
+//////////////////////////////////////////////////
+
+img {
+	&.fluid-image {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+//////////////////////////////////////////////////
 // Nav Defaults
 //////////////////////////////////////////////////
 
 nav {
 	ul {
+		margin: 0;
 		li {
 			display: block;
 			@media #{$medium} {
 				display: inline-block;
+			}
+			a {
+				font-weight: $content-font-weight;
+				background-image: none;
 			}
 		}
 	}

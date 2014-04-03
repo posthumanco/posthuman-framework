@@ -36,7 +36,7 @@ categories: docs documentation
 	</div>
 </p>
 
-<p>There are 3 media queries by default: <code>.small-#</code>, <code>.medium-#</code>, <code>.large-#</code> along with the <code>.column</code> or <code>.columns</code> classes. You define the number of columns you would like the div 
+<p>There are 5 media queries by default: <code>.small-#</code>, <code>.medium-#</code>, <code>.large-#</code> along with the <code>.column</code> or <code>.columns</code> classes. You define the number of columns you would like the div 
 
 <p>
 {% highlight html %}
@@ -60,8 +60,8 @@ categories: docs documentation
 #####Button Sizes
 
 <button class="primary tiny">.tiny</button>
-<button class="primary small">.tiny</button>
-<button class="primary">default</button>
+<button class="primary small">.small</button>
+<button class="primary">[default]</button>
 <button class="primary large">.large</button>
 <p><button class="primary expand large">.expand</button></p>
 
