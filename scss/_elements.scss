@@ -2,6 +2,9 @@
 // Colors
 //////////////////////////////////////////////////
 
+$black: rgb(20, 20, 20) !default;
+$white: rgb(235, 235, 235) !default;
+
 $primary: rgb(92, 133, 235) !default;
 	$primary-hover: darken($primary, 10%) !default;
 $secondary: rgb(0, 237, 122) !default;
