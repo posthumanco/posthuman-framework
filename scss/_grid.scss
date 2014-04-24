@@ -72,6 +72,9 @@ $extra-large: if($extra-large-enabled == true, "only screen and (min-width: 1300
     }
     &.full-width {
     	max-width: 100%;
+    	.row {
+    		max-width: $max-row-width;
+    	}
     }
     .row {
     	width: auto;
