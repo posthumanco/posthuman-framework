@@ -51,36 +51,36 @@ Don't waste your time. It's bad for business, and it's bad for you.
 * [Some tips from Smashing Magazine Magazine](http://www.smashingmagazine.com/2009/05/26/20-time-saving-tips-to-improve-designers-workflow-part-1/) - Some basic tips on creating templates, style files, and batch actions
 
 <ul>
-	<li>Hello</li>
-	<li>Hello
-		<ul>
-			<li>Hello
-				<ul>
-					<li>Hello</li>
-				</ul>
-			</li>
-		</ul>
-	</li>
+  <li>Hello</li>
+  <li>Hello
+    <ul>
+      <li>Hello
+        <ul>
+          <li>Hello</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
 <ol>
-	<li>Hello
-		<ul>
-			<li>Hello
-				<ul>
-					<li>Hello</li>
-				</ul>
-			</li>
-		</ul>
-		<ol>
-			<li>Hello</li>
-		</ol>
-	</li>
-	<li>Hello</li>
+  <li>Hello
+    <ul>
+      <li>Hello
+        <ul>
+          <li>Hello</li>
+        </ul>
+      </li>
+    </ul>
+    <ol>
+      <li>Hello</li>
+    </ol>
+  </li>
+  <li>Hello</li>
 </ol>
 
 <dl>
-	<dt>Goodbye</dt>
-	<dd>Hello</dd>
+  <dt>Goodbye</dt>
+  <dd>Hello</dd>
 </dl>
 
 #Hello

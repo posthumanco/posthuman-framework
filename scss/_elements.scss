@@ -6,13 +6,13 @@ $black: rgb(20, 20, 20) !default;
 $white: rgb(235, 235, 235) !default;
 
 $primary: rgb(92, 133, 235) !default;
-	$primary-hover: darken($primary, 10%) !default;
+  $primary-hover: darken($primary, 10%) !default;
 $secondary: rgb(0, 237, 122) !default;
-	$secondary-hover: darken($secondary, 10%) !default;
+  $secondary-hover: darken($secondary, 10%) !default;
 $disabled: rgb(200, 199, 184) !default;
-	$disabled-hover: darken($disabled, 2%) !default;
+  $disabled-hover: darken($disabled, 2%) !default;
 $alert: rgb(255, 54, 42) !default;
-	$alert-hover: darken($alert, 10%) !default;
+  $alert-hover: darken($alert, 10%) !default;
 
 $border-radius: 2px !default;
 
@@ -45,67 +45,67 @@ $h-margin: 0 0 1.1em 0 !default;
 
 // em Reset, Font Families
 body {
-	@if $screen-enabled == true {
-		font-size: $em-reset-screen;
-	}
-	@media #{$small} {
-		font-size: $em-reset-small;
-	}
-	@media #{$medium} {
-		font-size: $em-reset-medium;
-	}
-	@media #{$large} {
-		font-size: $em-reset-large;
-	}
-	@if $extra-large-enabled == true {
-		@media #{$extra-large} {
-			font-size: $em-reset-extra-large;
-		}
-	}
+  @if $screen-enabled == true {
+    font-size: $em-reset-screen;
+  }
+  @media #{$small} {
+    font-size: $em-reset-small;
+  }
+  @media #{$medium} {
+    font-size: $em-reset-medium;
+  }
+  @media #{$large} {
+    font-size: $em-reset-large;
+  }
+  @if $extra-large-enabled == true {
+    @media #{$extra-large} {
+      font-size: $em-reset-extra-large;
+    }
+  }
 }
 
 $import-default-fonts: true !default;
 
 @if $import-default-fonts == true {
-	@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Gentium+Book+Basic:400,700,400italic,700italic);
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Gentium+Book+Basic:400,700,400italic,700italic);
 } 
 
 @mixin h-elements {
-	@for $i from 1 through 6 {
-		h#{$i}, .h#{$i} {
-			color: $h-font-color;
-			font-family: $h-font-family;
-			font-size: $h-font-size - ($i * .2);
-			font-weight: $h-font-weight;
-			margin: $h-margin;
-			line-height: 1.2em;
-			a {
-				font-weight: $h-font-weight;
-			}
-			small {
-				font-size: $h-font-size - ($i * 1.4);
-				display: block;
-			}
-		}
-	}
+  @for $i from 1 through 6 {
+    h#{$i}, .h#{$i} {
+      color: $h-font-color;
+      font-family: $h-font-family;
+      font-size: $h-font-size - ($i * .2);
+      font-weight: $h-font-weight;
+      margin: $h-margin;
+      line-height: 1.2em;
+      a {
+        font-weight: $h-font-weight;
+      }
+      small {
+        font-size: $h-font-size - ($i * 1.4);
+        display: block;
+      }
+    }
+  }
 }
 
 @include h-elements;
 
 i {
-	font-style: italic;
+  font-style: italic;
 }
 
 p, ul, ol, dl {
-	margin: $p-margin;
-	font-family: $content-font-family;
-	font-size: $content-font-size;
-	font-weight: $content-font-weight;
-	line-height: $line-height;
+  margin: $p-margin;
+  font-family: $content-font-family;
+  font-size: $content-font-size;
+  font-weight: $content-font-weight;
+  line-height: $line-height;
 }
 
 strong {
-	font-weight: $h-font-weight;
+  font-weight: $h-font-weight;
 }
 
 // Lists
@@ -113,82 +113,82 @@ $ul-margin: 1.5em 0 1.5em 1em !default;
 $ol-margin: 1.5em 0 1.5em 1.4em !default;
 $dl-margin: 1.5em 0 1.5em 0 !default;
 @mixin child-list-margin-reset {
-	@each $list-type in ul, ol, dl {
-		#{$list-type} {
-			@extend #{$list-type};
-			margin-top: 0px;
-			margin-bottom: 0px;
-		}
-	}
+  @each $list-type in ul, ol, dl {
+    #{$list-type} {
+      @extend #{$list-type};
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+  }
 }
 
 ul {
-	margin: $ul-margin;
-	line-height: 0;
-	li {
-		line-height: $line-height;
-		list-style-type: disc;
-		@include child-list-margin-reset;
-	}
+  margin: $ul-margin;
+  line-height: 0;
+  li {
+    line-height: $line-height;
+    list-style-type: disc;
+    @include child-list-margin-reset;
+  }
 }
 ol {
-	margin: $ol-margin;
-	line-height: 0;
-	li {
-		line-height: $line-height;
-		list-style-type: decimal;
-		@include child-list-margin-reset;
-	}
+  margin: $ol-margin;
+  line-height: 0;
+  li {
+    line-height: $line-height;
+    list-style-type: decimal;
+    @include child-list-margin-reset;
+  }
 }
 dl {
-	margin: $dl-margin;
-	line-height: 0;
-	dd {
-		margin-left: 1em;
-		line-height: $line-height;
-		&:before {
-			content: "- ";
+  margin: $dl-margin;
+  line-height: 0;
+  dd {
+    margin-left: 1em;
+    line-height: $line-height;
+    &:before {
+      content: "- ";
 
-		}
-	}
+    }
+  }
 }
 
 /* THIS AREA NEEDS VARIABLES */
 
 //Code and code highlighting
 code {
-	background: #fff;
-	color: #777;
-	padding: .2em;
-	border-radius: $border-radius;
-	@media #{$small} {
-		padding: .1em;
-	}
+  background: #fff;
+  color: #777;
+  padding: .2em;
+  border-radius: $border-radius;
+  @media #{$small} {
+    padding: .1em;
+  }
 }
 
 .highlight {
-	@extend code;
-	padding: .5em;
-	// border: 1px solid #aaa;
-	code {
-		background: none;
-		white-space: pre-wrap;
-	}
+  @extend code;
+  padding: .5em;
+  // border: 1px solid #aaa;
+  code {
+    background: none;
+    white-space: pre-wrap;
+  }
 }
 
 blockquote {
-	padding-left: 10px;
-	border-left: 5px solid $disabled;
+  padding-left: 10px;
+  border-left: 5px solid $disabled;
 }
 
 cite {
-	font-style: italic;
-	font-size: .8em;
-	display: block;
-	margin-top: 1em;
-	&:before {
-		content: "\2014 \0020"
-	}
+  font-style: italic;
+  font-size: .8em;
+  display: block;
+  margin-top: 1em;
+  &:before {
+    content: "\2014 \0020"
+  }
 }
 
 //////////////////////////////////////////////////
@@ -202,63 +202,63 @@ $button-padding: .5em !default;
 $button-font-size: 1em !default;
 
 @mixin clickables() {
-	// generating other buttons
-	button, a.button, input[type=submit] {
-		background: $primary;
-		border: none;
-		padding: $button-padding;
-		font-size: $button-font-size;
-		display: inline-block;
-		border-radius: $border-radius;
-		color: white !important;
-		&:hover {
-			background: $primary-hover;
-		}
-		&.tiny {
-			padding: $button-padding;
-			font-size: $button-font-size - .3em;
-		}
-		&.small {
-			padding: $button-padding;
-			font-size: $button-font-size - .2em;
-		}
-		&.large {
-			padding: $button-padding + .4em;
-			font-size: $button-font-size + .2em;
-		}
-		&.expand {
-			width: 100%;
-		}
-		@each $type in $button-type {
-			&.#{nth($type, 1)} {
-				background: #{nth($type, 2)};
-				&:hover {
-					background: #{nth($type, 3)};
-				}
-			}
-		}
-	}
-	a {
-		color: $primary;
-		text-decoration: none;
-		font-family: $content-font-family;
-		font-size: $content-font-size;
-		font-weight: 400;
-		&:visited {
-			color: $primary;
-		}
-		&:hover {
-			color: $primary-hover;
-		}
-		@each $type in $button-type {
-			&.#{nth($type, 1)} {
-				color: #{nth($type, 2)};
-				&:hover {
-					color: #{nth($type, 3)};
-				}
-			}
-		}
-	}
+  // generating other buttons
+  button, a.button, input[type=submit] {
+    background: $primary;
+    border: none;
+    padding: $button-padding;
+    font-size: $button-font-size;
+    display: inline-block;
+    border-radius: $border-radius;
+    color: white !important;
+    &:hover {
+      background: $primary-hover;
+    }
+    &.tiny {
+      padding: $button-padding;
+      font-size: $button-font-size - .3em;
+    }
+    &.small {
+      padding: $button-padding;
+      font-size: $button-font-size - .2em;
+    }
+    &.large {
+      padding: $button-padding + .4em;
+      font-size: $button-font-size + .2em;
+    }
+    &.expand {
+      width: 100%;
+    }
+    @each $type in $button-type {
+      &.#{nth($type, 1)} {
+        background: #{nth($type, 2)};
+        &:hover {
+          background: #{nth($type, 3)};
+        }
+      }
+    }
+  }
+  a {
+    color: $primary;
+    text-decoration: none;
+    font-family: $content-font-family;
+    font-size: $content-font-size;
+    font-weight: 400;
+    &:visited {
+      color: $primary;
+    }
+    &:hover {
+      color: $primary-hover;
+    }
+    @each $type in $button-type {
+      &.#{nth($type, 1)} {
+        color: #{nth($type, 2)};
+        &:hover {
+          color: #{nth($type, 3)};
+        }
+      }
+    }
+  }
 }
 
 @include clickables;
@@ -268,10 +268,10 @@ $button-font-size: 1em !default;
 //////////////////////////////////////////////////
 
 img {
-	&.fluid-image {
-		max-width: 100%;
-		height: auto;
-	}
+  &.fluid-image {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 //////////////////////////////////////////////////
@@ -279,18 +279,18 @@ img {
 //////////////////////////////////////////////////
 
 nav {
-	ul {
-		margin: 0;
-		li {
-			display: block;
-			@media #{$medium} {
-				display: inline-block;
-			}
-			a {
-				font-weight: $content-font-weight;
-				background-image: none;
-			}
-		}
-	}
+  ul {
+    margin: 0;
+    li {
+      display: block;
+      @media #{$medium} {
+        display: inline-block;
+      }
+      a {
+        font-weight: $content-font-weight;
+        background-image: none;
+      }
+    }
+  }
 }
 

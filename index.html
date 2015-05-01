@@ -4,51 +4,51 @@ title: Posthuman
 ---
 
 <div class="content">
-	{% for post in paginator.posts %}
-		<div class="post">
-			<div class="row collapse banner">
-				<div class="small-12 columns">
-					<img src="{{ post.banner }}">
-				</div>
-			</div>
-			<div class="small-11 small-centered medium-10 medium-centered large-6 large-centered columns">
-		  		<h2 class="h1"><a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date_to_string }}</small></h2>
-				{{ post.content }}
-		  	</div>
-	  	</div>
-	{% endfor %}
-	<div class="row">
-		<div class="small-11 small-centered medium-10 medium-centered large-6 large-centered columns">
-			<div class="pagination">
-				<nav>
-					<ul>
-					{% if paginator.previous_page %}
-						{% if paginator.previous_page == 1 %}
-						<li><a href="/">Newer</a></li>
-						{% else %}
-						<li><a href="/page{{ paginator.previous_page }}">Newer</a></li>
-						{% endif %}
-					{% else %}
-					{% endif %}
-					{% if paginator.page == 1 %}
-					<li><span class="active">1</span></li>
-					{% else %}
-					<li><a href="/">1</a></li>
-					{% endif %}
-					{% for count in (2..paginator.total_pages) %}
-						{% if count == paginator.page %}
-						<li><span class="active">{{ count }}</span></li>
-						{% else %}
-						<li><a href="/page{{ count }}">{{ count }}</a></li>
-						{% endif %}
-					{% endfor %}
-					{% if paginator.next_page %}
-					<li><a href="/page{{ paginator.next_page }}">Older</a></li>
-					{% else %}
-					{% endif %}
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</div>
+  {% for post in paginator.posts %}
+    <div class="post">
+      <div class="row collapse banner">
+        <div class="small-12 columns">
+          <img src="{{ post.banner }}">
+        </div>
+      </div>
+      <div class="small-11 small-centered medium-10 medium-centered large-6 large-centered columns">
+          <h2 class="h1"><a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date_to_string }}</small></h2>
+        {{ post.content }}
+        </div>
+      </div>
+  {% endfor %}
+  <div class="row">
+    <div class="small-11 small-centered medium-10 medium-centered large-6 large-centered columns">
+      <div class="pagination">
+        <nav>
+          <ul>
+          {% if paginator.previous_page %}
+            {% if paginator.previous_page == 1 %}
+            <li><a href="/">Newer</a></li>
+            {% else %}
+            <li><a href="/page{{ paginator.previous_page }}">Newer</a></li>
+            {% endif %}
+          {% else %}
+          {% endif %}
+          {% if paginator.page == 1 %}
+          <li><span class="active">1</span></li>
+          {% else %}
+          <li><a href="/">1</a></li>
+          {% endif %}
+          {% for count in (2..paginator.total_pages) %}
+            {% if count == paginator.page %}
+            <li><span class="active">{{ count }}</span></li>
+            {% else %}
+            <li><a href="/page{{ count }}">{{ count }}</a></li>
+            {% endif %}
+          {% endfor %}
+          {% if paginator.next_page %}
+          <li><a href="/page{{ paginator.next_page }}">Older</a></li>
+          {% else %}
+          {% endif %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
 </div>

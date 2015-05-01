@@ -6,13 +6,13 @@ layout: default
 <!-- <p class="meta">{{ page.date | date_to_string }} - {{ page.categories | join: ', ' }}</p> -->
 
 <div class="post">
-	<div class="row collapse banner">
-		<div class="small-12 columns">
-			<img src="{{ page.banner }}">
-		</div>
-	</div>
-	<div class="small-11 small-centered medium-10 medium-centered large-6 large-centered columns">
-  		<h1><a href="{{ post.url }}">{{ page.title }}</a> <small>{{ page.date | date_to_string }}</small></h1>
-		{{ content }}
-  	</div>
+  <div class="row collapse banner">
+    <div class="small-12 columns">
+      <img src="{{ page.banner }}">
+    </div>
+  </div>
+  <div class="small-11 small-centered medium-10 medium-centered large-6 large-centered columns">
+      <h1><a href="{{ post.url }}">{{ page.title }}</a> <small>{{ page.date | date_to_string }}</small></h1>
+    {{ content }}
+    </div>
 </div>

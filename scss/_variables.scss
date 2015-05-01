@@ -6,22 +6,22 @@
 // Columns
 //////////////////////////////
 
-	// $total-columns: 12; // The total number of columns in each row
-	// $column-gutter: 2%; // The percentage you woul like between columns
+  // $total-columns: 12; // The total number of columns in each row
+  // $column-gutter: 2%; // The percentage you woul like between columns
 
 //////////////////////////////
 // Rows
 //////////////////////////////
 
-	// $max-row-width: 1224px; // Basically the max-width of your site. All rows will use this without the full-width class
+  // $max-row-width: 1224px; // Basically the max-width of your site. All rows will use this without the full-width class
 
 //////////////////////////////
 // Media Queries
 //////////////////////////////
 
-	// $small: "only screen"; // Media query for small screens/mobile devices
-	// $medium: "only screen and (min-width: 768px)"; // Media query for medium screens/tablets
-	// $large: "only screen and (min-width: 1024px)"; // Media query for large screens/desktops
+  // $small: "only screen"; // Media query for small screens/mobile devices
+  // $medium: "only screen and (min-width: 768px)"; // Media query for medium screens/tablets
+  // $large: "only screen and (min-width: 1024px)"; // Media query for large screens/desktops
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -32,59 +32,59 @@
 // Em set/Default Font Sizes
 //////////////////////////////
 
-	// $em-reset-screen: 16px; // Sets 1em for small screens/mobile devices
-	// $em-reset-medium: 18px; // Sets 1em for medium screens/tablets
-	// $em-reset-large: 22px; // Sets 1 em for large screens/desktops
+  // $em-reset-screen: 16px; // Sets 1em for small screens/mobile devices
+  // $em-reset-medium: 18px; // Sets 1em for medium screens/tablets
+  // $em-reset-large: 22px; // Sets 1 em for large screens/desktops
 
 //////////////////////////////
 // Font Imports
 //////////////////////////////
 
-	// $import-default-fonts: true; // Imports custom base fonts from Google Fonts, set to false not to use.
+  // $import-default-fonts: true; // Imports custom base fonts from Google Fonts, set to false not to use.
 
 //////////////////////////////
 // Font Families
 //////////////////////////////
 
-	// $h-font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; // Sets default h element font-family
-	// $content-font-family: "Gentium Book Basic", Times, serif; // Sets default content font-family
+  // $h-font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; // Sets default h element font-family
+  // $content-font-family: "Gentium Book Basic", Times, serif; // Sets default content font-family
 
 //////////////////////////////
 // Font Sizes
 //////////////////////////////
 
-	// $h-font-size: 2em; // Sets default h element font-size
-	// $h-font-weight: 700; // Sets default h element font-weight
-	// $content-font-size: 1em; // Sets default content font-size
-	// $content-font-weight: 300; // Sets default content font-weight
+  // $h-font-size: 2em; // Sets default h element font-size
+  // $h-font-weight: 700; // Sets default h element font-weight
+  // $content-font-size: 1em; // Sets default content font-size
+  // $content-font-weight: 300; // Sets default content font-weight
 
 //////////////////////////////
 // Line Spacing
 //////////////////////////////
 
-	// $line-height: 1.61803398875; // Sets default line-height
-	// $p-margin: 1.5em 0; // Sets the default p block margins
+  // $line-height: 1.61803398875; // Sets default line-height
+  // $p-margin: 1.5em 0; // Sets the default p block margins
 
 //////////////////////////////
 // Button/Link Colors
 //////////////////////////////
 
-	// $primary: rgb(0, 0, 255);
-		// $primary-hover: darken($primary, 10%);
+  // $primary: rgb(0, 0, 255);
+    // $primary-hover: darken($primary, 10%);
 
-	// $secondary: rgb(173, 216, 230);
-		// $secondary-hover: darken($secondary, 10%);
+  // $secondary: rgb(173, 216, 230);
+    // $secondary-hover: darken($secondary, 10%);
 
-	// $disabled: rgb(128, 128, 128);
-		// $disabled-hover: darken($disabled, 10%);
+  // $disabled: rgb(128, 128, 128);
+    // $disabled-hover: darken($disabled, 10%);
 
-	// $alert: rgb(255, 0, 0);
-		// $alert-hover: darken($alert, 10%);
+  // $alert: rgb(255, 0, 0);
+    // $alert-hover: darken($alert, 10%);
 
 //////////////////////////////
 // Button Padding/Font Sizes
 //////////////////////////////
 
-	// $button-padding: .5em;
-	// $button-font-size: 1em;
-	// $button-border-radius: 2px;
+  // $button-padding: .5em;
+  // $button-font-size: 1em;
+  // $button-border-radius: 2px;

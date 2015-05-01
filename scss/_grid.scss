@@ -16,40 +16,40 @@ $extra-large: if($extra-large-enabled == true, "only screen and (min-width: 1300
 //////////////////////////////////////////////////
 
 @mixin columns($size) {
-	@for $i from 1 through $total-columns {
-		$column-calc: (100% / $total-columns) * $i;
-		.#{$size}#{-$i} {
-			@if $size == push {
-				left: $column-calc;
-			}
-			@elseif $size == pull {
-				right: $column-calc;
-			}
-			@else {
-				width: $column-calc;
-			}
-			position: relative;
-		}
-		@if $size != push and $size != pull {
-			.#{$size}-offset#{-$i} {
-				margin-left: $column-calc;
-			}
-		}
-	}
-	@if $size != push and $size != pull {
-		.#{$size}-centered {
-			position: relative;
-			margin-left: auto;
-			margin-right: auto;
-			float: none !important;
-		}
-		.#{$size}-uncentered {
-			position: relative;
-			margin-left: 0;
-			margin-right: 0;
-			float: left !important;
-		}
-	}
+  @for $i from 1 through $total-columns {
+    $column-calc: (100% / $total-columns) * $i;
+    .#{$size}#{-$i} {
+      @if $size == push {
+        left: $column-calc;
+      }
+      @elseif $size == pull {
+        right: $column-calc;
+      }
+      @else {
+        width: $column-calc;
+      }
+      position: relative;
+    }
+    @if $size != push and $size != pull {
+      .#{$size}-offset#{-$i} {
+        margin-left: $column-calc;
+      }
+    }
+  }
+  @if $size != push and $size != pull {
+    .#{$size}-centered {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      float: none !important;
+    }
+    .#{$size}-uncentered {
+      position: relative;
+      margin-left: 0;
+      margin-right: 0;
+      float: left !important;
+    }
+  }
 }
 
 //////////////////////////////////////////////////
@@ -57,43 +57,43 @@ $extra-large: if($extra-large-enabled == true, "only screen and (min-width: 1300
 //////////////////////////////////////////////////
 
 .row {
-	width: auto;
-	margin: 0 auto;
-	max-width: $max-row-width;
-	&:before, &:after {
-		content: " ";
-    	display: table;
+  width: auto;
+  margin: 0 auto;
+  max-width: $max-row-width;
+  &:before, &:after {
+    content: " ";
+      display: table;
     }
     &:after {
-    	clear: both;
+      clear: both;
     }
     &.collapse > .column, &.collapse > .columns {
-		padding: 0px;
+    padding: 0px;
     }
     &.full-width {
-    	max-width: 100%;
-    	.row {
-    		max-width: $max-row-width;
-    	}
+      max-width: 100%;
+      .row {
+        max-width: $max-row-width;
+      }
     }
     .row {
-    	width: auto;
-    	// margin-left: -$column-gutter / 2;
-    	// margin-right: -$column-gutter / 2;
-    	max-width: 100%;
-    	&:before, &:after {
-			content: " ";
-			display: table;
-	    }
-	    &:after {
-	    	clear: both;
-	    }
-	    &.collapse > .column, &.collapse > .columns {
-			padding: 0px;
-	    }
-	    &.full-width {
-	    	max-width: 100%;
-	    }
+      width: auto;
+      // margin-left: -$column-gutter / 2;
+      // margin-right: -$column-gutter / 2;
+      max-width: 100%;
+      &:before, &:after {
+      content: " ";
+      display: table;
+      }
+      &:after {
+        clear: both;
+      }
+      &.collapse > .column, &.collapse > .columns {
+      padding: 0px;
+      }
+      &.full-width {
+        max-width: 100%;
+      }
     }
 }
 
@@ -102,10 +102,10 @@ $extra-large: if($extra-large-enabled == true, "only screen and (min-width: 1300
 //////////////////////////////////////////////////
 
 .column, .columns {
-	float: left;
-	padding-left: $column-gutter / 2;
-	padding-right: $column-gutter / 2;
-	width: 100%;
+  float: left;
+  padding-left: $column-gutter / 2;
+  padding-right: $column-gutter / 2;
+  width: 100%;
 }
 
 //////////////////////////////////////////////////
@@ -113,14 +113,14 @@ $extra-large: if($extra-large-enabled == true, "only screen and (min-width: 1300
 //////////////////////////////////////////////////
 
 @each $float in left, right {
-	.#{$float} {
-		float: $float !important;
-	}
+  .#{$float} {
+    float: $float !important;
+  }
 }
 @each $align in left, right, center {
-	.text-#{$align} {
-		text-align: $align;
-	}
+  .text-#{$align} {
+    text-align: $align;
+  }
 }
 
 //////////////////////////////////////////////////
@@ -132,25 +132,25 @@ $extra-large: if($extra-large-enabled == true, "only screen and (min-width: 1300
 @include columns(pull);
 
 @if $screen-enabled == true {
-	@media #{$screen} {
-		@include columns(screen);	
-	}
+  @media #{$screen} {
+    @include columns(screen);  
+  }
 }
 
 @media #{$small} {
-	@include columns(small);	
+  @include columns(small);  
 }
 
 @media #{$medium} {
-	@include columns(medium);
+  @include columns(medium);
 }
 
 @media #{$large} {
-	@include columns(large);
+  @include columns(large);
 }
 
 @if $extra-large-enabled == true {
-	@media #{$extra-large} {
-		@include columns(extra-large);
-	}
+  @media #{$extra-large} {
+    @include columns(extra-large);
+  }
 }
