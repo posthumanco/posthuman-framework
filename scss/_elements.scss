@@ -5,16 +5,13 @@
 $black: rgb(20, 20, 20) !default;
 $white: rgb(235, 235, 235) !default;
 
-$primary: rgb(92, 133, 235) !default;
-  $primary-hover: darken($primary, 10%) !default;
-$secondary: rgb(0, 237, 122) !default;
-  $secondary-hover: darken($secondary, 10%) !default;
-$disabled: rgb(200, 199, 184) !default;
-  $disabled-hover: darken($disabled, 2%) !default;
-$alert: rgb(255, 54, 42) !default;
-  $alert-hover: darken($alert, 10%) !default;
+$primary-color: rgb(92, 133, 235) !default;
+$secondary-color: rgb(0, 237, 122) !default;
+$disabled-color: rgb(200, 199, 184) !default;
+$alert-color: rgb(255, 54, 42) !default;
 
 $border-radius: 2px !default;
+$squared-border-radius: 1px !default;
 
 //////////////////////////////////////////////////
 // Typography
@@ -33,15 +30,15 @@ $content-font-family: "Gentium Book Basic", Times, serif !default;
 
 // Font Sizes
 $h-font-color: black;
-$h-font-size: 1.8em !default;
+$h-font-size: 1.8rem !default;
 $h-font-weight: 700 !default;
-$content-font-size: 1em !default;
+$content-font-size: 1rem !default;
 $content-font-weight: 300 !default;
 
 // Line Heights & Element Margins
 $line-height: 1.5 !default;
-$p-margin: 0 0 1.5em 0 !default;
-$h-margin: 0 0 1.1em 0 !default;
+$p-margin: 0 0 1.5rem 0 !default;
+$h-margin: 0 0 1.1rem 0 !default;
 
 // em Reset, Font Families
 body {
@@ -78,7 +75,7 @@ $import-default-fonts: true !default;
       font-size: $h-font-size - ($i * .2);
       font-weight: $h-font-weight;
       margin: $h-margin;
-      line-height: 1.2em;
+      line-height: 1.2rem;
       a {
         font-weight: $h-font-weight;
       }
@@ -109,9 +106,9 @@ strong {
 }
 
 // Lists
-$ul-margin: 1.5em 0 1.5em 1em !default;
-$ol-margin: 1.5em 0 1.5em 1.4em !default;
-$dl-margin: 1.5em 0 1.5em 0 !default;
+$ul-margin: 1.5rem 0 1.5rem 1rem !default;
+$ol-margin: 1.5rem 0 1.5rem 1.4rem !default;
+$dl-margin: 1.5rem 0 1.5rem 0 !default;
 @mixin child-list-margin-reset {
   @each $list-type in ul, ol, dl {
     #{$list-type} {
@@ -143,8 +140,8 @@ ol {
 dl {
   margin: $dl-margin;
   line-height: 0;
-  dd {
-    margin-left: 1em;
+  dd, dt {
+    margin-left: 1rem;
     line-height: $line-height;
     &:before {
       content: "- ";
@@ -159,16 +156,16 @@ dl {
 code {
   background: #fff;
   color: #777;
-  padding: .2em;
+  padding: .2rem;
   border-radius: $border-radius;
   @media #{$small} {
-    padding: .1em;
+    padding: .1rem;
   }
 }
 
 .highlight {
   @extend code;
-  padding: .5em;
+  padding: .5rem;
   // border: 1px solid #aaa;
   code {
     background: none;
@@ -178,14 +175,14 @@ code {
 
 blockquote {
   padding-left: 10px;
-  border-left: 5px solid $disabled;
+  border-left: 5px solid $disabled-color;
 }
 
 cite {
   font-style: italic;
-  font-size: .8em;
+  font-size: .8rem;
   display: block;
-  margin-top: 1em;
+  margin-top: 1rem;
   &:before {
     content: "\2014 \0020"
   }
@@ -195,83 +192,104 @@ cite {
 // Buttons and A elements
 //////////////////////////////////////////////////
 
-$button-type: primary $primary $primary-hover, secondary $secondary $secondary-hover, disabled $disabled $disabled-hover, alert $alert $alert-hover;
+@mixin buttons {
+  $padding-horizontal: 1.78rem;
+  $padding-vertical: 0.57rem;
+  $size: 0.8;
+  $wide-size: 1.2;
+  padding: ($padding-vertical * 1) ($padding-horizontal * 1);
+  font-size: 1rem;
+  @each $button-size in tiny, small, medium, large, xlarge {
+    &.#{$button-size} {
+      padding: ($padding-vertical * $size) ($padding-horizontal * $size);
+      font-size: 1rem * $size;
+      &.wide {
+        padding: ($padding-vertical * $size) ($padding-horizontal * $wide-size);
+      }
+      &.squared {
+        //+border-radius($border-radius-square);
+      }
+      &.no-border {
+        padding: (($padding-vertical + 0.23rem) * $size) ($padding-horizontal * $size);
+        border: none !important;
+      }
+    }
+    $size: $size + 0.1;
+  }
+}
 
-
-$button-padding: .5em !default;
-$button-font-size: 1em !default;
-
-@mixin clickables() {
-  // generating other buttons
-  button, a.button, input[type=submit] {
-    background: $primary;
-    border: none;
-    padding: $button-padding;
-    font-size: $button-font-size;
-    display: inline-block;
-    border-radius: $border-radius;
-    color: white !important;
-    &:hover {
-      background: $primary-hover;
+@mixin color-and-hover($original, $button: false, $border-width: 1px) {
+  //@include transition(all 500ms);
+  $target: color;
+  @if $button == true {
+    $target: background-color;
+  }
+  #{$target}: $original;
+  @if $button == true {
+    color: $white;
+    border: $border-width solid $original;
+    &.inverted {
+      background-color: transparent;
+      color: $original;
+      &:hover, &:focus {
+        background-color: transparent;
+        color: darken($original, 15%);
+        border: $border-width solid darken($original, 15%);
+      }
     }
-    &.tiny {
-      padding: $button-padding;
-      font-size: $button-font-size - .3em;
-    }
-    &.small {
-      padding: $button-padding;
-      font-size: $button-font-size - .2em;
-    }
-    &.large {
-      padding: $button-padding + .4em;
-      font-size: $button-font-size + .2em;
-    }
-    &.expand {
-      width: 100%;
-    }
-    @each $type in $button-type {
-      &.#{nth($type, 1)} {
-        background: #{nth($type, 2)};
-        &:hover {
-          background: #{nth($type, 3)};
-        }
+    &.reversed {
+      background-color: $white;
+      color: $original;
+      border: $border-width solid $white;
+      &:hover, &:focus {
+        background-color: darken($white, 15%);
+        color: $original;
+        border: $border-width solid darken($white, 15%);
       }
     }
   }
-  a {
-    color: $primary;
-    text-decoration: none;
-    font-family: $content-font-family;
-    font-size: $content-font-size;
-    font-weight: 400;
-    &:visited {
-      color: $primary;
+  &:hover, &:focus {
+    outline: none;
+    @if $button == true {
+      #{$target}: darken($original, 8%);
+      color: $white;
+      border: $border-width solid darken($original, 8%);
     }
-    &:hover {
-      color: $primary-hover;
+    @else {
+      #{$target}: darken($original, 15%);
     }
-    @each $type in $button-type {
-      &.#{nth($type, 1)} {
-        color: #{nth($type, 2)};
-        &:hover {
-          color: #{nth($type, 3)};
-        }
+  }
+  &.disabled {
+    #{$target}: lighten($original, 20%);
+    @if $button == true {
+      border: $border-width solid lighten($original, 20%);
+    }
+    &:hover, &:focus {
+      #{$target}: lighten($original, 20%);
+      outline: none;
+      @if $button == true {
+        border: $border-width solid darken($original, 8%);
       }
     }
   }
 }
 
-@include clickables;
+a {
+  @include color-and-hover($primary-color);
+}
+
+button, .button, input[type="submit"] {
+  @include buttons;
+  @include color-and-hover($primary-color, true);
+}
 
 //////////////////////////////////////////////////
 // Images
 //////////////////////////////////////////////////
 
 img {
-  &.fluid-image {
-    max-width: 100%;
-    height: auto;
-  }
+  max-width: 100%;
+  height: auto;
 }
 
 //////////////////////////////////////////////////
